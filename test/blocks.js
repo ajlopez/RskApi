@@ -19,6 +19,30 @@ exports['get block number'] = function (test) {
 	});
 };
 
+exports['get block by number'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlock = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber(42, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, '0x2a');
+		
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
