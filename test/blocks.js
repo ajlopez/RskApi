@@ -24,7 +24,7 @@ exports['get block by number'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBlock = function (number) {
+	provider.eth_getBlockByNumber = function (number) {
 		return {
 			number: number
 		}
@@ -48,7 +48,7 @@ exports['get block by hash'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBlock = function (hash) {
+	provider.eth_getBlockByHash = function (hash) {
 		return {
 			hash: hash
 		}
