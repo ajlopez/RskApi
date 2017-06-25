@@ -2,7 +2,7 @@
 var rskapi = require('..');
 
 var methods = {
-	eth_getBlockNumber: function () {
+	eth_blockNumber: function () {
 		return 42;
 	}
 };

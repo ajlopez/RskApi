@@ -6,7 +6,7 @@ exports['get block number'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBlockNumber = function () {
+	provider.eth_blockNumber = function () {
 		return 42;
 	};
 	
