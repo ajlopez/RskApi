@@ -43,6 +43,30 @@ exports['get block by number'] = function (test) {
 	});
 };
 
+exports['get blocks by number'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlocksByNumber = function (number) {
+		return [
+			{
+				number: number
+			}
+		];
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlocksByNumber(42, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.ok(Array.isArray(data));
+		
+		test.done();
+	});
+};
+
 exports['get block by hash'] = function (test) {
 	var provider = createProvider();
 	
