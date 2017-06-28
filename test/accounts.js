@@ -40,6 +40,29 @@ exports['get transaction count'] = function (test) {
 	});
 };
 
+
+exports['get transaction count using account hash and block'] = function (test) {
+	var provider = createProvider();
+	var expected = 1000;
+	expected = '0x' + expected.toString(16);
+	
+	test.async();
+	
+	provider.eth_getTransactionCount = function (hash, block) {
+		test.equal(block, expected);
+		return '0x2a'
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getTransactionCount('0x1234', 1000, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, '0x2a');
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
