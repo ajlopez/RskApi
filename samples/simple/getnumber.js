@@ -7,7 +7,7 @@ host.getBlockNumber(function (err, data) {
 	if (err)
 		console.log('error', err);
 	else
-		console.log(parseInt(data, 16));
+		console.log(data);
 });
 
 

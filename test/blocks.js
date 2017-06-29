@@ -7,13 +7,14 @@ exports['get block number'] = function (test) {
 	test.async();
 	
 	provider.eth_blockNumber = function () {
-		return 42;
+		return '0x2a';
 	};
 	
 	var host = rskapi.host(provider);
 	
 	host.getBlockNumber(function (err, data) {
 		test.equal(err, null);
+		test.equal(typeof data, 'number');
 		test.equal(data, 42);
 		test.done();
 	});
