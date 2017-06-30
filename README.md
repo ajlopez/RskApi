@@ -3,6 +3,8 @@
 [RSK](http://rsk.co) API, accesing a running node using JSON RPC. It's a simple replacement to the usual web3
 interface.
 
+This is a personal project, not related with or endorsed by [RSK](http://rsk.co).
+
 ## Installation
 
 Via npm on Node:
