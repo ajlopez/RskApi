@@ -40,6 +40,27 @@ exports['get code'] = function (test) {
 	});
 };
 
+exports['get storage at'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getStorageAt = function (hash, address, block) {
+		test.equal(address, '0x2a');
+		test.equal(block, 'latest');
+		return '0x1234';
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getStorageAt('0x1234', 42, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, '0x1234');
+		test.done();
+	});
+};
+
 exports['get transaction count'] = function (test) {
 	var provider = createProvider();
 	
