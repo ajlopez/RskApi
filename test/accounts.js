@@ -104,6 +104,27 @@ exports['get transaction count using account hash and block'] = function (test) 
 	});
 };
 
+exports['get accounts'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_accounts = function (hash) {
+		return [ '0x2a' ];
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getAccounts(function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.ok(Array.isArray(data));
+		test.equal(data.length, 1);
+		test.equal(data[0], '0x2a');
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
