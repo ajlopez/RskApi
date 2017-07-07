@@ -20,6 +20,25 @@ exports['get gas price'] = function (test) {
 	});
 };
 
+exports['get mining'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_mining = function () {
+		return true;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getMining(function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.strictEqual(data, true);
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
