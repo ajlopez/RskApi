@@ -39,6 +39,25 @@ exports['get mining'] = function (test) {
 	});
 };
 
+exports['get compilers'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_compilers = function () {
+		return [ "solidity" ];
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getCompilers(function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.deepEqual(data, [ "solidity" ]);
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
