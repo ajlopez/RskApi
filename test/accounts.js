@@ -145,6 +145,28 @@ exports['new personal account using passphrase'] = function (test) {
 	});
 };
 
+exports['unlock personal account using passphrase'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.personal_unlockAccount = function (address, passphrase, duration) {
+		test.equal(address, 'address');
+		test.equal(passphrase, 'hello');
+		test.equal(duration, '3600');
+		return true;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.unlockPersonalAccount('address', 'hello', '3600', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, true);
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
