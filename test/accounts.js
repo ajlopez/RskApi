@@ -125,6 +125,26 @@ exports['get accounts'] = function (test) {
 	});
 };
 
+exports['new personal account using passphrase'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.personal_newAccount = function (passphrase) {
+		test.equal(passphrase, 'hello');
+		return 'world';
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.newPersonalAccount('hello', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, 'world');
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
