@@ -70,6 +70,33 @@ exports['send transaction'] = function (test) {
 	});
 };
 
+exports['call transaction'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_call = function (data) {
+		return data;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	var txdata = {
+		from: '0x01',
+		to: '0x02',
+		gasPrice: 1,
+		gas: 21000,
+		value: 10000
+	}
+	
+	host.callTransaction(txdata, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.deepEqual(data, txdata);
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
