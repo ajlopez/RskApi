@@ -153,13 +153,13 @@ exports['unlock personal account using passphrase'] = function (test) {
 	provider.personal_unlockAccount = function (address, passphrase, duration) {
 		test.equal(address, 'address');
 		test.equal(passphrase, 'hello');
-		test.equal(duration, '3600');
+		test.equal(duration, '0xe10');
 		return true;
 	};
 	
 	var host = rskapi.host(provider);
 	
-	host.unlockPersonalAccount('address', 'hello', '3600', function (err, data) {
+	host.unlockPersonalAccount('address', 'hello', 3600, function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(data, true);
