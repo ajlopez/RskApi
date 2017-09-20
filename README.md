@@ -30,6 +30,7 @@ TBD
 
 - 0.0.1 Published
 - 0.0.2 Published, callTransaction
+- 0.0.3 Published, fix duration encoding in unlock account
 
 ## Contribution
 
