@@ -15,7 +15,14 @@ npm install rskapi
 
 ## Usage
 
-TBD
+Create the RSK API Object by calling the host function.
+```
+var rskapi = require('rskapi');
+
+var rsk = rskapi.host('http://host.to.node.com:PORT');
+
+/** operations with the node **/
+```
 
 ## References
 
