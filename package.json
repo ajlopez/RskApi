@@ -10,7 +10,7 @@
     "test": "simpleunit -r ./test"
   }
 , "dependencies": {
-	"simplejsonrpc": "0.0.2"
+	"simplejsonrpc": "0.0.3"
   }
 , "devDependencies": {
     "simpleunit": "0.0.7"
