@@ -38,6 +38,7 @@ TBD
 - 0.0.1 Published
 - 0.0.2 Published, callTransaction
 - 0.0.3 Published, fix duration encoding in unlock account
+- 0.0.4 Published, using simplejsonrpc 0.0.3
 
 ## Contribution
 
