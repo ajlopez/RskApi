@@ -6,7 +6,8 @@ exports['get balance'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBalance = function (hash) {
+	provider.eth_getBalance = function (hash, block) {
+		test.equal(block, 'latest');
 		return '0x2a'
 	};
 	
