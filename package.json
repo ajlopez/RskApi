@@ -1,7 +1,7 @@
 { "name": "rskapi"
 , "description": "RSK API using Simple JSON RPC, a web3 replacement"
 , "keywords": [ "rsk", "ethereum", "api", "web3" ]
-, "version": "0.0.4"
+, "version": "0.0.5"
 , "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
 , "repository": { "type": "git", "url": "git://github.com/ajlopez/RskApi.git" }
 , "main": "./lib/rskapi.js"
