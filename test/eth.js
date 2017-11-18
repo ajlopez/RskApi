@@ -63,7 +63,7 @@ exports['get compilers'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_compilers = function () {
+	provider.eth_getCompilers = function () {
 		return [ "solidity" ];
 	};
 	
