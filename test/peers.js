@@ -40,6 +40,26 @@ exports['get peer list'] = function (test) {
 	});
 };
 
+exports['get scoring peer list'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.sco_peerList = function (hash) {
+		return [];
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getScoringPeerList(function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.ok(Array.isArray(data));
+		test.equal(data.length, 0);
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
