@@ -40,6 +40,7 @@ TBD
 - 0.0.3 Published, fix duration encoding in unlock account
 - 0.0.4 Published, using simplejsonrpc 0.0.3
 - 0.0.5 Published, sending second argument in getBalance
+- 0.0.6 Published, sending transaction normalized data
 
 ## Contribution
 
