@@ -28,6 +28,7 @@ var rsk = rskapi.host('http://host.to.node.com:PORT');
 
 - [Web3 JavaScript app API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 - [Web3 documentation](http://web3js.readthedocs.io/en/1.0/web3.html)
+- [JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC)
 
 ## Samples
 
