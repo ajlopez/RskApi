@@ -12,6 +12,7 @@ var txdata = {
 	to: to,
 	value: value,
 	gas: 21000,
+	nonce: 0x10,
 	gasPrice: 1
 }
 
