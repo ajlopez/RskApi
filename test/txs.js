@@ -97,6 +97,27 @@ exports['call transaction'] = function (test) {
 	});
 };
 
+exports['send raw transaction'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_sendRawTransaction = function (data) {
+		return data;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	var txdata = '010203';
+	
+	host.sendRawTransaction(txdata, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, '0x010203');
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
