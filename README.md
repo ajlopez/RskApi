@@ -44,6 +44,7 @@ TBD
 - 0.0.6 Published, sending transaction normalized data
 - 0.0.7 Published, exposing JSON RPC provider
 - 0.0.8 Published, using simplejsonrpc 0.0.4 with https support
+- 0.0.9 Published, send raw transaction
 
 ## Contribution
 
