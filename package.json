@@ -15,7 +15,7 @@
     },
     "main": "./lib/rskapi.js",
     "engines": {
-        "node": ">= 0.12.0"
+        "node": ">= 8.0.0"
     },
     "scripts": {
         "test": "simpleunit -r ./test"
@@ -23,7 +23,5 @@
     "dependencies": {
         "simplejsonrpc": "0.0.5"
     },
-    "devDependencies": {
-        "simpleunit": "0.0.8"
-    }
+    "devDependencies": {}
 }
