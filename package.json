@@ -23,5 +23,7 @@
     "dependencies": {
         "simplejsonrpc": "0.0.5"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "simpleunit": "0.0.8"
+    }
 }
