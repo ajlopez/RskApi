@@ -37,15 +37,16 @@ TBD
 
 ## Versions
 
-- 0.0.1 Published
-- 0.0.2 Published, callTransaction
-- 0.0.3 Published, fix duration encoding in unlock account
-- 0.0.4 Published, using simplejsonrpc 0.0.3
-- 0.0.5 Published, sending second argument in getBalance
-- 0.0.6 Published, sending transaction normalized data
-- 0.0.7 Published, exposing JSON RPC provider
-- 0.0.8 Published, using simplejsonrpc 0.0.4 with https support
-- 0.0.9 Published, send raw transaction
+- 0.0.1 initial version
+- 0.0.2 callTransaction
+- 0.0.3 fix duration encoding in unlock account
+- 0.0.4 using simplejsonrpc 0.0.3
+- 0.0.5 sending second argument in getBalance
+- 0.0.6 sending transaction normalized data
+- 0.0.7 exposing JSON RPC provider
+- 0.0.8 using simplejsonrpc 0.0.4 with https support
+- 0.0.9 send raw transaction
+- 0.0.10 support async/await; using simplejsonrpc 0.0.6
 
 ## Contribution
 
