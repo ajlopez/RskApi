@@ -44,6 +44,126 @@ exports['get block by number'] = function (test) {
 	});
 };
 
+exports['get block by number using decimal string'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber('42', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, '0x2a');
+		
+		test.done();
+	});
+};
+
+exports['get block by number using hexadecimal'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber('0x2a', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, '0x2a');
+		
+		test.done();
+	});
+};
+
+exports['get latest block'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber('latest', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, 'latest');
+		
+		test.done();
+	});
+};
+
+exports['get pending block'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber('pending', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, 'pending');
+		
+		test.done();
+	});
+};
+
+exports['get earliest block'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number) {
+		return {
+			number: number
+		}
+	};
+	
+	var host = rskapi.host(provider);
+	
+	host.getBlockByNumber('earliest', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, 'earliest');
+		
+		test.done();
+	});
+};
+
 exports['get blocks by number'] = function (test) {
 	var provider = createProvider();
 	
