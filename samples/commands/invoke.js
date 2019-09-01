@@ -32,7 +32,7 @@ const tx = {
     value: 0,
     gas: config.options.gas || 5000000,
     gasPrice: config.options.gasPrice || 60000000,
-    data: simpleabi.encodeCall(fn, args)
+    data: '0x' + simpleabi.encodeCall(fn, args)
 };
 
 const host = rskapi.host(config.host);
@@ -40,7 +40,7 @@ const host = rskapi.host(config.host);
 (async function() {
     const txh = await txs.send(host, from, tx);
     console.log('transaction', txh);
-    await txs.receipt(host, txh);
-    console.log('done');
+    const txr = await txs.receipt(host, txh);
+    console.log(txr && parseInt(txr.status) ? 'done' : 'failed');
 })();
 

@@ -33,7 +33,7 @@ const tx = {
     value: 0,
     gas: config.options.gas || 5000000,
     gasPrice: config.options.gasPrice || 60000000,
-    data: simpleabi.encodeCall(fn, args)
+    data: '0x' + simpleabi.encodeCall(fn, args)
 };
 
 const host = rskapi.host(config.host);
