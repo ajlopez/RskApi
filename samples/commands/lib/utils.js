@@ -15,6 +15,19 @@ function getAddress(config, user) {
     return user;
 }
 
+function getInstanceAddress(config, name) {
+    if (name.substring(0, 2).toLowerCase() === '0x')
+        return name;
+    
+    if (!config.instances)
+        return name;
+    
+    if (config.instances[name])
+        return config.instances[name].address || config.instances[name];
+    
+    return name;
+}
+
 function getAccount(config, user) {
     if (user.substring(0, 2).toLowerCase() === '0x')
         return user;
@@ -37,6 +50,7 @@ function getValue(value) {
 
 module.exports = {
     getAddress: getAddress,
+    getInstanceAddress: getInstanceAddress,
     getAccount: getAccount,
     getValue: getValue
 };
