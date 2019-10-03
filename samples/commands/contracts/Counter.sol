@@ -10,6 +10,10 @@ contract Counter {
     function add(uint value) public {
         counter += value;
     }
+    
+    function fail() public pure {
+        require(false, "fail error");
+    }
 }
 
 
