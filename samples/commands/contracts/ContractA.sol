@@ -12,6 +12,8 @@ contract ContractA {
         c = new ContractC();
     }
     
+    function() external payable { }
+    
     function invoke() public {
         b.invoke();
         c.invoke();
