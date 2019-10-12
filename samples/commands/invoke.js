@@ -22,10 +22,7 @@ if (!config.options)
 const from = utils.getAccount(config, process.argv[2]);
 const to = utils.getInstanceAddress(config, process.argv[3]);
 const fn = process.argv[4];
-let args = process.argv[5];
-
-if (args)
-    args = args.split(',');
+let args = utils.getArguments(config, process.argv[5]);
 
 const tx = {
     to: to,

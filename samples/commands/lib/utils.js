@@ -48,9 +48,37 @@ function getValue(value) {
     return parseInt(value);
 }
 
+function processArgument(config, arg) {
+    if (config.accounts && config.accounts[arg])
+        if (config.accounts[arg].address)
+            return config.accounts[arg].address;
+        else
+            return config.accounts[arg];
+        
+    if (config.instances && config.instances[arg])
+        return config.instances[arg].address;
+        
+    return arg;
+}
+
+function processArguments(config, args) {
+    if (!args)
+        return null;
+    
+    if (typeof args === 'string')
+        args = args.split(';');
+    
+    for (let k = 0, l = args.length; k < l; k++)
+        args[k] = processArgument(config, args[k]);
+    
+    return args;
+}
+
 module.exports = {
     getAddress: getAddress,
     getInstanceAddress: getInstanceAddress,
     getAccount: getAccount,
-    getValue: getValue
+    getValue: getValue,
+    getArguments: processArguments
 };
+

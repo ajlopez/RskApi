@@ -18,6 +18,10 @@ contract ContractA {
         b.invoke();
         c.invoke();
     }
+    
+    function transfer(address payable receiver, uint amount) public {
+        receiver.transfer(amount);
+    }
 }
 
 
