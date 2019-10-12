@@ -3,14 +3,14 @@ function getAddress(config, user) {
     if (user.substring(0, 2).toLowerCase() === '0x')
         return user;
     
-    if (!config.accounts)
-        return user;
-    
-    if (config.accounts[user])
+    if (config.accounts && config.accounts[user])
         if (config.accounts[user].address)
             return config.accounts[user].address;
         else
             return config.accounts[user];
+        
+    if (config.instances && config.instances[user])
+        return config.instances[user].address;
         
     return user;
 }
