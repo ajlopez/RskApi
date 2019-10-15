@@ -22,6 +22,10 @@ contract ContractA {
     function transfer(address payable receiver, uint amount) public {
         receiver.transfer(amount);
     }
+    
+    function kill(address payable receiver) public {
+        selfdestruct(receiver);
+    }
 }
 
 
