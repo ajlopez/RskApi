@@ -6,6 +6,7 @@ import "./ContractC.sol";
 contract ContractA {
     ContractB b;
     ContractC c;
+    bytes32 hash;
     
     constructor() public {
         b = new ContractB();
@@ -26,6 +27,15 @@ contract ContractA {
     function kill(address payable receiver) public {
         selfdestruct(receiver);
     }
+    
+    function success(uint value) public {
+        require(value > 0, "value should be positive");
+        b.success(value - 1);
+    }
+    
+    function lotofwork(uint times) public {
+        for (uint k = 0; k < times; k++)
+            hash = keccak256(abi.encode(k));
+    }
 }
-
 

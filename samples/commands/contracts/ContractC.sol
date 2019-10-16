@@ -6,6 +6,10 @@ contract ContractC {
     function invoke() public {
         counter++;
     }
+    
+    function success(uint value) public {
+        require(value > 0, "value should be positive");
+    }
 }
 
 
