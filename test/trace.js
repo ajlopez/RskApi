@@ -2,7 +2,7 @@
 var rskapi = require('..');
 
 exports['trace block'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -10,11 +10,11 @@ exports['trace block'] = function (test) {
 		return number;
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.traceBlock(42, function (err, data) {
 		test.equal(err, null);
-		test.equal(data, '0x2a');
+		test.strictEqual(data, '0x2a');
 		test.done();
 	});
 };
