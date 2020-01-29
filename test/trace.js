@@ -19,6 +19,24 @@ exports['trace block'] = function (test) {
 	});
 };
 
+exports['trace transaction'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.trace_transaction = function (number) {
+		return number;
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.traceTransaction(42, function (err, data) {
+		test.equal(err, null);
+		test.strictEqual(data, '0x2a');
+		test.done();
+	});
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
