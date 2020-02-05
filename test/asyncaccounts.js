@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get balance'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getBalance = function (hash, block) {
 		test.equal(block, 'latest');
@@ -19,7 +19,7 @@ exports['get balance'] = async function (test) {
 };
 
 exports['get code'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -38,7 +38,7 @@ exports['get code'] = async function (test) {
 };
 
 exports['get storage at'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getStorageAt = function (hash, address, block) {
 		test.equal(address, '0x2a');
@@ -57,7 +57,7 @@ exports['get storage at'] = async function (test) {
 };
 
 exports['get transaction count'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getTransactionCount = function (hash, block) {
 		test.equal(block, 'latest');
@@ -75,16 +75,15 @@ exports['get transaction count'] = async function (test) {
 
 
 exports['get transaction count using account hash and block'] = async function (test) {
-	var provider = createProvider();
-	var expected = 1000;
-	expected = '0x' + expected.toString(16);
+	const provider = createProvider();
+	const expected = '0x' + (1000).toString(16);
 	
 	provider.eth_getTransactionCount = function (hash, block) {
 		test.equal(block, expected);
 		return '0x2a'
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	const count = await host.getTransactionCount('0x1234', 1000);
     
@@ -94,7 +93,7 @@ exports['get transaction count using account hash and block'] = async function (
 };
 
 exports['get accounts'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_accounts = function (hash) {
 		return [ '0x2a' ];
@@ -112,7 +111,7 @@ exports['get accounts'] = async function (test) {
 };
 
 exports['new personal account using passphrase'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.personal_newAccount = function (passphrase) {
 		test.equal(passphrase, 'hello');
@@ -129,7 +128,7 @@ exports['new personal account using passphrase'] = async function (test) {
 };
 
 exports['unlock personal account using passphrase'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.personal_unlockAccount = function (address, passphrase, duration) {
 		test.equal(address, 'address');
@@ -148,7 +147,7 @@ exports['unlock personal account using passphrase'] = async function (test) {
 };
 
 exports['lock personal account using passphrase'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.personal_lockAccount = function (address) {
 		test.equal(address, 'address');

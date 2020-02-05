@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get block number'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -10,7 +10,7 @@ exports['get block number'] = function (test) {
 		return '0x2a';
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockNumber(function (err, data) {
 		test.equal(err, null);
@@ -21,7 +21,7 @@ exports['get block number'] = function (test) {
 };
 
 exports['get block by number'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -31,7 +31,7 @@ exports['get block by number'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber(42, function (err, data) {
 		test.equal(err, null);
@@ -45,7 +45,7 @@ exports['get block by number'] = function (test) {
 };
 
 exports['get block by number using decimal string'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -55,7 +55,7 @@ exports['get block by number using decimal string'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber('42', function (err, data) {
 		test.equal(err, null);
@@ -69,7 +69,7 @@ exports['get block by number using decimal string'] = function (test) {
 };
 
 exports['get block by number using hexadecimal'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -79,7 +79,7 @@ exports['get block by number using hexadecimal'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber('0x2a', function (err, data) {
 		test.equal(err, null);
@@ -93,7 +93,7 @@ exports['get block by number using hexadecimal'] = function (test) {
 };
 
 exports['get latest block'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -103,7 +103,7 @@ exports['get latest block'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber('latest', function (err, data) {
 		test.equal(err, null);
@@ -117,7 +117,7 @@ exports['get latest block'] = function (test) {
 };
 
 exports['get pending block'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -127,7 +127,7 @@ exports['get pending block'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber('pending', function (err, data) {
 		test.equal(err, null);
@@ -141,7 +141,7 @@ exports['get pending block'] = function (test) {
 };
 
 exports['get earliest block'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -151,7 +151,7 @@ exports['get earliest block'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber('earliest', function (err, data) {
 		test.equal(err, null);
@@ -165,7 +165,7 @@ exports['get earliest block'] = function (test) {
 };
 
 exports['get blocks by number'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -177,7 +177,7 @@ exports['get blocks by number'] = function (test) {
 		];
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlocksByNumber(42, function (err, data) {
 		test.equal(err, null);
@@ -189,7 +189,7 @@ exports['get blocks by number'] = function (test) {
 };
 
 exports['get block by hash'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -199,7 +199,7 @@ exports['get block by hash'] = function (test) {
 		}
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBlockByHash('0x1234', function (err, data) {
 		test.equal(err, null);
