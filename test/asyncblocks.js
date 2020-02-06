@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get block number'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_blockNumber = function () {
 		return '0x2a';
@@ -18,7 +18,7 @@ exports['get block number'] = async function (test) {
 };
 
 exports['get block by number'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getBlockByNumber = function (number) {
 		return {
@@ -39,7 +39,7 @@ exports['get block by number'] = async function (test) {
 };
 
 exports['get blocks by number'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getBlocksByNumber = function (number) {
 		return [
@@ -61,7 +61,7 @@ exports['get blocks by number'] = async function (test) {
 };
 
 exports['get block by hash'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.eth_getBlockByHash = function (hash) {
 		return {
