@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get balance'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -11,7 +11,7 @@ exports['get balance'] = function (test) {
 		return '0x2a'
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getBalance('0x1234', function (err, data) {
 		test.equal(err, null);
@@ -22,7 +22,7 @@ exports['get balance'] = function (test) {
 };
 
 exports['get code'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -31,7 +31,7 @@ exports['get code'] = function (test) {
 		return '0x2a';
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getCode('0x1234', function (err, data) {
 		test.equal(err, null);
@@ -42,7 +42,7 @@ exports['get code'] = function (test) {
 };
 
 exports['get storage at'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -52,7 +52,7 @@ exports['get storage at'] = function (test) {
 		return '0x1234';
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getStorageAt('0x1234', 42, function (err, data) {
 		test.equal(err, null);
@@ -63,7 +63,7 @@ exports['get storage at'] = function (test) {
 };
 
 exports['get transaction count'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -72,7 +72,7 @@ exports['get transaction count'] = function (test) {
 		return '0x2a'
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getTransactionCount('0x1234', function (err, data) {
 		test.equal(err, null);
@@ -84,9 +84,8 @@ exports['get transaction count'] = function (test) {
 
 
 exports['get transaction count using account hash and block'] = function (test) {
-	var provider = createProvider();
-	var expected = 1000;
-	expected = '0x' + expected.toString(16);
+	const provider = createProvider();
+	const expected = '0x' + (1000).toString(16);
 	
 	test.async();
 	
@@ -95,7 +94,7 @@ exports['get transaction count using account hash and block'] = function (test) 
 		return '0x2a'
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getTransactionCount('0x1234', 1000, function (err, data) {
 		test.equal(err, null);
@@ -106,7 +105,7 @@ exports['get transaction count using account hash and block'] = function (test) 
 };
 
 exports['get accounts'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -114,7 +113,7 @@ exports['get accounts'] = function (test) {
 		return [ '0x2a' ];
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getAccounts(function (err, data) {
 		test.equal(err, null);
@@ -127,7 +126,7 @@ exports['get accounts'] = function (test) {
 };
 
 exports['new personal account using passphrase'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -136,7 +135,7 @@ exports['new personal account using passphrase'] = function (test) {
 		return 'world';
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.newPersonalAccount('hello', function (err, data) {
 		test.equal(err, null);
@@ -147,7 +146,7 @@ exports['new personal account using passphrase'] = function (test) {
 };
 
 exports['unlock personal account using passphrase'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -158,7 +157,7 @@ exports['unlock personal account using passphrase'] = function (test) {
 		return true;
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.unlockPersonalAccount('address', 'hello', 3600, function (err, data) {
 		test.equal(err, null);
@@ -169,7 +168,7 @@ exports['unlock personal account using passphrase'] = function (test) {
 };
 
 exports['lock personal account using passphrase'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -178,7 +177,7 @@ exports['lock personal account using passphrase'] = function (test) {
 		return true;
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.lockPersonalAccount('address', function (err, data) {
 		test.equal(err, null);
