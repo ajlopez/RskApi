@@ -1,13 +1,13 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
-var methods = {
+const methods = {
 	eth_blockNumber: function () {
 		return 42;
 	}
 };
 
-var server;
+let server;
 
 exports['start http server'] = function (test) {
 	test.async();
@@ -23,7 +23,7 @@ exports['start http server'] = function (test) {
 };
 	
 exports['get block number'] = function (test) {
-	var host = rskapi.host('http://localhost:3000');
+	const host = rskapi.host('http://localhost:3000');
 	
 	test.async();
 	
@@ -48,16 +48,16 @@ exports['stop http server'] = function (test) {
 function createServer(methods) {
 	return require('http').createServer(function (req, res) {		
 		if (req.method === 'POST') {
-			var body = '';
+			let body = '';
 
 			req.on('data', function (data) {
 				body += data;
 			});
 
 			req.on('end', function () {
-				var input = JSON.parse(body);
+				const input = JSON.parse(body);
 				
-				var data = {
+				const data = {
 					id: input.id,
 					jsonrpc: input.data
 				};
