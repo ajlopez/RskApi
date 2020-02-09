@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get peers count'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -10,7 +10,7 @@ exports['get peers count'] = function (test) {
 		return '0x2a'
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getPeerCount(function (err, data) {
 		test.equal(err, null);
@@ -21,7 +21,7 @@ exports['get peers count'] = function (test) {
 };
 
 exports['get peer list'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -29,7 +29,7 @@ exports['get peer list'] = function (test) {
 		return [];
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getPeerList(function (err, data) {
 		test.equal(err, null);
@@ -41,7 +41,7 @@ exports['get peer list'] = function (test) {
 };
 
 exports['get scoring peer list'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -49,7 +49,7 @@ exports['get scoring peer list'] = function (test) {
 		return [];
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getScoringPeerList(function (err, data) {
 		test.equal(err, null);
