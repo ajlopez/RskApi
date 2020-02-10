@@ -1,0 +1,33 @@
+{
+    "host": "http://localhost:8545",
+    "accounts": {
+        "alice": {
+            "privateKey": "0xa6a95746ba99d5fca702dd3ac0887e04772312a1f4c0db7720238e37c8072273",
+            "publicKey": "0xa4dc06b9ff894590ae39afa51661332a01bd90a0f42f500a366cfdcdbb15d65b943e1ba1271452d5cd00804fc1aa6122a3ea3240773f2e7bee2406145c43ce23",
+            "address": "0xa06d7c47ca5382d07b8b61a0aa6aff33ea41a07f"
+        },
+        "bob": "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826",
+        "root": {
+            "privateKey": "0x4d5db4107d237df6a3d58ee5f70ae63d73d7658d4026f2eefd2f204c81682cb7",
+            "address": "0x00a329c0648769a73afac7f9381e08fb43dbea72"
+        }
+    },
+    "instances": {
+        "bridge": {
+            "address": "0x94c21DE0D1761e45B53772233AF696583ddB72cb"
+        },
+        "counter": {
+            "address": "0x731a10897d267e19b34503ad902d0a29173ba4b1",
+            "contract": "Counter"
+        },
+        "Counter": {
+            "address": "0x62d69f6867a0a084c6d313943dc22023bc263691",
+            "contract": "counter"
+        },
+        "a": {
+            "address": "0xee35211c4d9126d520bbfeaf3cfee5fe7b86f221",
+            "contract": "ContractA"
+        }
+    },
+    "options": {}
+}

@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get client version'] = function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -10,7 +10,7 @@ exports['get client version'] = function (test) {
 		return 'version 42';
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getClientVersion(function (err, data) {
 		test.equal(err, null);
