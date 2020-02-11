@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get client version'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.web3_clientVersion = function () {
 		return 'version 42';
