@@ -1,5 +1,5 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['debug transaction'] = function (test) {
 	const provider = createProvider();
