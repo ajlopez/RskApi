@@ -1,14 +1,14 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['debug transaction'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.debug_transaction = function (number) {
 		return number;
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 
 	const result = await host.debugTransaction(42);
 	
