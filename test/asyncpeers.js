@@ -1,8 +1,8 @@
 
-var rskapi = require('..');
+const rskapi = require('..');
 
 exports['get peers count'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.net_peerCount = function (hash) {
 		return '0x2a'
@@ -18,7 +18,7 @@ exports['get peers count'] = async function (test) {
 };
 
 exports['get peer list'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	provider.net_peerList = function (hash) {
 		return [];
@@ -35,7 +35,7 @@ exports['get peer list'] = async function (test) {
 };
 
 exports['get scoring peer list'] = async function (test) {
-	var provider = createProvider();
+	const provider = createProvider();
 	
 	test.async();
 	
@@ -43,7 +43,7 @@ exports['get scoring peer list'] = async function (test) {
 		return [];
 	};
 	
-	var host = rskapi.host(provider);
+	const host = rskapi.host(provider);
 	
 	host.getScoringPeerList(function (err, data) {
 		test.equal(err, null);
