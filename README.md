@@ -47,6 +47,7 @@ TBD
 - 0.0.8 using simplejsonrpc 0.0.4 with https support
 - 0.0.9 send raw transaction
 - 0.0.10 support async/await; using simplejsonrpc 0.0.6
+- 0.0.11 new trace commands; get block using pending, latests, earlier
 
 ## Contribution
 
