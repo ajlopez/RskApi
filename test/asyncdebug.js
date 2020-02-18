@@ -4,7 +4,7 @@ const rskapi = require('..');
 exports['debug transaction'] = async function (test) {
 	const provider = createProvider();
 	
-	provider.debug_transaction = function (number) {
+	provider.debug_traceTransaction = function (number) {
 		return number;
 	};
 	

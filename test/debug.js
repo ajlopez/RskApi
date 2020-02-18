@@ -6,7 +6,7 @@ exports['debug transaction'] = function (test) {
 	
 	test.async();
 	
-	provider.debug_transaction = function (number) {
+	provider.debug_traceTransaction = function (number) {
 		return number;
 	};
 	
