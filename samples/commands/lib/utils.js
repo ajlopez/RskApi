@@ -1,4 +1,46 @@
 
+const utils = require('ethereumjs-util');
+
+function generateRandomHexaByte() {
+    let n = Math.floor(Math.random() * 255).toString(16);
+    
+    while (n.length < 2)
+        n = '0' + n;
+    
+    return n;
+}
+
+function generateRandomPrivateKey() {
+    let key;
+    
+    do {
+        let keytxt = '';
+        
+        for (let k = 0; k < 32; k++)
+            keytxt += generateRandomHexaByte();
+        
+        key = new Buffer(keytxt, 'hex');
+    }
+    while (!utils.isValidPrivate(key));
+    
+    return key;
+}
+
+function generateAccount() {
+    let privateKey = generateRandomPrivateKey();
+    let publicKey = '0x' + utils.privateToPublic(privateKey).toString('hex');
+    let address = '0x' + utils.privateToAddress(privateKey).toString('hex');
+    
+    if (!utils.isValidAddress(address))
+        throw new Error('invalid address: ' + address);
+    
+    return {
+        privateKey: '0x' + privateKey.toString('hex'),
+        publicKey: publicKey,
+        address: address
+    }
+}
+
 function getAddress(config, user) {
     if (user.substring(0, 2).toLowerCase() === '0x')
         return user;
@@ -75,6 +117,7 @@ function processArguments(config, args) {
 }
 
 module.exports = {
+    generateAccount: generateAccount,
     getAddress: getAddress,
     getInstanceAddress: getInstanceAddress,
     getAccount: getAccount,
