@@ -90,6 +90,29 @@ exports['transfer value using options'] = async function (test) {
     test.done();
 };
 
+exports['transfer value using private key'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_sendRawTransaction = function (tx) {
+        test.ok(tx);
+        test.equal(typeof tx, 'string');
+        test.equal(tx.substring(0, 2), '0x');
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.xtransfer({ privateKey: "0xcf449c250f204987e030972c4274fd0947a1721a657923c78fa2f50d41a9dbb7" }, 2, 3, { gas: 100000, gasPrice: 1000 });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
