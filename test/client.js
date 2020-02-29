@@ -55,6 +55,30 @@ exports['get balance'] = async function (test) {
     test.done();
 };
 
+exports['get receipt'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    let ntimes = 0;
+    
+	provider.eth_getTransactionReceipt = function (hash) {
+        if (++ntimes > 2)
+            return {};
+        
+        return null;
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.receipt(1, 0);
+    
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    test.equal(ntimes, 3);
+    
+    test.done();
+};
+
 exports['transfer value'] = async function (test) {
     test.async();
     
@@ -296,6 +320,35 @@ exports['call contract using options and address'] = async function (test) {
     const client = rskapi.client(provider);
     
     const result = await client.call({ address: 1 }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['deploy contract using options and address'] = async function (test) {
+    test.async();
+    
+    const code = '0x010203040506';
+    const provider = createProvider();
+    
+	provider.eth_sendTransaction = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.ok(!tx.to);
+        test.equal(tx.gasPrice, 100);
+        test.equal(tx.gas, 1000000);
+        test.equal(tx.value, 10);
+        test.equal(tx.data, code);
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.deploy({ address: 1 }, code, null, { gas: 1000000, value: 10, gasPrice: 100 });
     
     test.ok(result);
     test.equal(result, '0x2a');
