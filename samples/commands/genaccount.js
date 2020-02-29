@@ -16,9 +16,8 @@ if (!config.accounts)
     config.accounts = {};
 
 const name = process.argv[2];
-const account = rskapi.account();
 
-const host = rskapi.host(config.host);
+const account = rskapi.account();
 
 config.accounts[name] = account;
 console.log('address', config.accounts[name].address);
