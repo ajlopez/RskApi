@@ -12,6 +12,26 @@ exports['get client'] = function (test) {
     test.strictEqual(client.host().provider(), provider);    
 };
 
+exports['get accounts'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_accounts = function (hash) {
+		return [];
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.accounts();
+    
+    test.ok(result);
+    test.ok(Array.isArray(result));
+    test.equal(result.length, 0);
+    
+    test.done();
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
