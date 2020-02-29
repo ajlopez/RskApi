@@ -197,6 +197,90 @@ exports['invoke contract using options and private key'] = async function (test)
     test.done();
 };
 
+exports['call contract'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_call = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.equal(tx.to, '0x0000000000000000000000000000000000000002');
+        test.equal(tx.gasPrice, 0);
+        test.equal(tx.gas, 5000000);
+        test.equal(tx.value, 0);
+        test.equal(tx.data, '0x' + simpleabi.encodeCall('symbol()', null));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.xcall(1, 2, 'symbol()');
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['call contract using options'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_call = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.equal(tx.to, '0x0000000000000000000000000000000000000002');
+        test.equal(tx.gasPrice, 100);
+        test.equal(tx.gas, 1000000);
+        test.equal(tx.value, 10);
+        test.equal(tx.data, '0x' + simpleabi.encodeCall('balanceOf(address)', [ 1 ]));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.xcall(1, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['call contract using options and address'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_call = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.equal(tx.to, '0x0000000000000000000000000000000000000002');
+        test.equal(tx.gasPrice, 100);
+        test.equal(tx.gas, 1000000);
+        test.equal(tx.value, 10);
+        test.equal(tx.data, '0x' + simpleabi.encodeCall('balanceOf(address)', [ 1 ]));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.xcall({ address: 1 }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
@@ -204,3 +288,4 @@ function createProvider() {
 		}
 	}
 }
+
