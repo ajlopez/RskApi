@@ -25,7 +25,6 @@ const receiver = utils.getAddress(config, to);
 const client = rskapi.client(config.host);
 
 (async function() {
-    console.dir(sender);
     const txh = await client.transfer(sender, receiver, value);
     console.log('transaction', txh);
     const txr = await client.receipt(txh, 0);
