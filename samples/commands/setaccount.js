@@ -18,11 +18,11 @@ if (!config.accounts)
 const name = process.argv[2];
 const address = process.argv[3];
 
-const host = rskapi.host(config.host);
+const client = rskapi.client(config.host);
 
 if (address && address.length <= 2)
     (async function() {
-        const accounts = await host.getAccounts();
+        const accounts = await client.accounts();
         config.accounts[name] = accounts[parseInt(address)];
         
         console.log('address', config.accounts[name]);
