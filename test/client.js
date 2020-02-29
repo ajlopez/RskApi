@@ -56,7 +56,7 @@ exports['transfer value'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xtransfer(1, 2, 3);
+    const result = await client.transfer(1, 2, 3);
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -83,7 +83,7 @@ exports['transfer value using options'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xtransfer(1, 2, 3, { gas: 100000, gasPrice: 1000 });
+    const result = await client.transfer(1, 2, 3, { gas: 100000, gasPrice: 1000 });
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -106,7 +106,7 @@ exports['transfer value using private key'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xtransfer({ privateKey: "0xcf449c250f204987e030972c4274fd0947a1721a657923c78fa2f50d41a9dbb7" }, 2, 3, { gas: 100000, gasPrice: 1000 });
+    const result = await client.transfer({ privateKey: "0xcf449c250f204987e030972c4274fd0947a1721a657923c78fa2f50d41a9dbb7" }, 2, 3, { gas: 100000, gasPrice: 1000 });
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -138,7 +138,7 @@ exports['invoke contract'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xinvoke(1, 2, 'symbol()');
+    const result = await client.invoke(1, 2, 'symbol()');
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -166,7 +166,7 @@ exports['invoke contract using options'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xinvoke(1, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    const result = await client.invoke(1, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -189,7 +189,7 @@ exports['invoke contract using options and private key'] = async function (test)
     
     const client = rskapi.client(provider);
     
-    const result = await client.xinvoke({ privateKey: "0xcf449c250f204987e030972c4274fd0947a1721a657923c78fa2f50d41a9dbb7" }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    const result = await client.invoke({ privateKey: "0xcf449c250f204987e030972c4274fd0947a1721a657923c78fa2f50d41a9dbb7" }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -217,7 +217,7 @@ exports['call contract'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xcall(1, 2, 'symbol()');
+    const result = await client.call(1, 2, 'symbol()');
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -245,7 +245,7 @@ exports['call contract using options'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xcall(1, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    const result = await client.call(1, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
     
     test.ok(result);
     test.equal(result, '0x2a');
@@ -273,7 +273,7 @@ exports['call contract using options and address'] = async function (test) {
     
     const client = rskapi.client(provider);
     
-    const result = await client.xcall({ address: 1 }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
+    const result = await client.call({ address: 1 }, 2, 'balanceOf(address)', [ 1 ], { gas: 1000000, value: 10, gasPrice: 100 });
     
     test.ok(result);
     test.equal(result, '0x2a');
