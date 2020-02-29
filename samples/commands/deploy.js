@@ -1,8 +1,6 @@
 
 const rskapi = require('../..');
-const simpleabi = require('simpleabi');
 const utils = require('./lib/utils');
-const txs = require('./lib/txs');
 const fs = require('fs');
 
 let config;
@@ -23,28 +21,18 @@ if (!config.options)
 const from = process.argv[2];
 const name = process.argv[3];
 const contractname = process.argv[4];
-let args = process.argv[5];
-
-if (args)
-    args = args.split(',');
+let args = utils.getArguments(config, process.argv[5]);
 
 const contract = require('./build/contracts/' + contractname + '.json');
 
 const sender = utils.getAccount(config, from);
 
-const tx = {
-    value: 0,
-    gas: config.options.gas || 5000000,
-    gasPrice: config.options.gasPrice || 60000000,
-    data: contract.bytecode + simpleabi.encodeValues(args)
-};
-
-const host = rskapi.host(config.host);
+const client = rskapi.client(config.host);
 
 (async function() {
-    const txh = await txs.send(host, sender, tx);
+    const txh = await client.deploy(sender, contract.bytecode, args);
     console.log('transaction', txh);
-    const txr = await txs.receipt(host, txh);
+    const txr = await client.receipt(txh, 0);
     
     if (txr)
         console.log('address', txr.contractAddress);

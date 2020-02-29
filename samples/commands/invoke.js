@@ -1,8 +1,6 @@
 
 const rskapi = require('../..');
-const simpleabi = require('simpleabi');
 const utils = require('./lib/utils');
-const txs = require('./lib/txs');
 
 let config;
 
@@ -19,25 +17,17 @@ if (!config.instances)
 if (!config.options)
     config.options = {};
 
+const client = rskapi.client(config.host);
+
 const from = utils.getAccount(config, process.argv[2]);
 const to = utils.getInstanceAddress(config, process.argv[3]);
 const fn = process.argv[4];
 let args = utils.getArguments(config, process.argv[5]);
 
-const tx = {
-    to: to,
-    value: 0,
-    gas: config.options.gas || 5000000,
-    gasPrice: config.options.gasPrice || 60000000,
-    data: '0x' + simpleabi.encodeCall(fn, args)
-};
-
-const host = rskapi.host(config.host);
-
 (async function() {
-    const txh = await txs.send(host, from, tx);
+    const txh = await client.invoke(from, to, fn, args);
     console.log('transaction', txh);
-    const txr = await txs.receipt(host, txh);
+    const txr = await client.receipt(txh, 0);
     console.log(txr && parseInt(txr.status) ? 'done' : 'failed');
 })();
 

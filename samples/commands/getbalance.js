@@ -15,10 +15,10 @@ const address = utils.getAddress(config, process.argv[2]);
 
 console.log('address', address);
 
-const host = rskapi.host(config.host);
+const client = rskapi.client(config.host);
 
 (async function() {
-    const balance = await host.getBalance(address);
+    const balance = await client.balance(address);
     
     console.log('balance', balance);
 })();
