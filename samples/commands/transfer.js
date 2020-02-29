@@ -22,19 +22,14 @@ const value = utils.getValue(process.argv[4]);
 const sender = utils.getAccount(config, from);
 const receiver = utils.getAddress(config, to);
 
-const tx = {
-    to: receiver,
-    value: value,
-    gas: config.options.gas || 100000,
-    gasPrice: config.options.gasPrice || 60000000
-};
-
-const host = rskapi.host(config.host);
+const client = rskapi.client(config.host);
 
 (async function() {
-    const txh = await txs.send(host, sender, tx);
+    console.dir(sender);
+    const txh = await client.transfer(sender, receiver, value);
     console.log('transaction', txh);
-    await txs.receipt(host, txh);
-    console.log('done');
+    const txr = await client.receipt(txh, 0);
+    
+    console.log(parseInt(txr.status) ? 'done' : 'failed');
 })();
 

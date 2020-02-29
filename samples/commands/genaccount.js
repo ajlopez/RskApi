@@ -1,6 +1,5 @@
 
 const rskapi = require('../..');
-const utils = require('./lib/utils');
 
 const fs = require('fs');
 
@@ -17,7 +16,7 @@ if (!config.accounts)
     config.accounts = {};
 
 const name = process.argv[2];
-const account = utils.generateAccount();
+const account = rskapi.account();
 
 const host = rskapi.host(config.host);
 
