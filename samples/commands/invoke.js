@@ -2,20 +2,7 @@
 const rskapi = require('../..');
 const utils = require('./lib/utils');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
-
-if (!config.instances)
-    config.instances = {};
-
-if (!config.options)
-    config.options = {};
+const config = utils.loadConfiguration('./config.json');
 
 const client = rskapi.client(config.host);
 

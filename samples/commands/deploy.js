@@ -1,22 +1,8 @@
 
 const rskapi = require('../..');
 const utils = require('./lib/utils');
-const fs = require('fs');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
-
-if (!config.instances)
-    config.instances = {};
-
-if (!config.options)
-    config.options = {};
+const config = utils.loadConfiguration('./config.json');
 
 const from = process.argv[2];
 const name = process.argv[3];
@@ -42,7 +28,7 @@ const client = rskapi.client(config.host);
         contract: contractname
     };
     
-    fs.writeFileSync('./config.json', JSON.stringify(config, null, 4));
+    utils.saveConfiguration('./config.json', config);
     
     console.log('done');
 })();

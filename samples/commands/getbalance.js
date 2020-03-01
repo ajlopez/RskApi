@@ -2,14 +2,7 @@
 const rskapi = require('../..');
 const utils = require('./lib/utils');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
+const config = utils.loadConfiguration('./config.json');
 
 const address = utils.getAddress(config, process.argv[2]);
 
@@ -22,3 +15,4 @@ const client = rskapi.client(config.host);
     
     console.log('balance', balance);
 })();
+

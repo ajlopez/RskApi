@@ -2,17 +2,7 @@
 const rskapi = require('../..');
 const utils = require('./lib/utils');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
-
-if (!config.options)
-    config.options = {};
+const config = utils.loadConfiguration('./config.json');
 
 const from = process.argv[2];
 const to = process.argv[3];

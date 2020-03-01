@@ -1,21 +1,11 @@
 
-const fs = require('fs');
+const utils = require('./lib/utils');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
+const config = utils.loadConfiguration('./config.json');
 
 const gasPrice = parseInt(process.argv[2]);
 
-if (!config.options)
-    config.options = {};
-
 config.options.gasPrice = gasPrice;
 
-fs.writeFileSync('./config.json', JSON.stringify(config, null, 4));
+utils.saveConfiguration('./config.json', config);
 

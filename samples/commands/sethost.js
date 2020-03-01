@@ -1,18 +1,11 @@
 
-const fs = require('fs');
+const utils = require('./lib/utils');
 
-let config;
-
-try {
-    config = require('./config.json');
-}
-catch (ex) {
-    config = {};
-}
+const config = utils.loadConfiguration('./config.json');
 
 const host = process.argv[2];
 
 config.host = host;
 
-fs.writeFileSync('./config.json', JSON.stringify(config, null, 4));
+utils.saveConfiguration('./config.json', config);
 
