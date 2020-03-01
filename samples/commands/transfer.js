@@ -1,7 +1,6 @@
 
 const rskapi = require('../..');
 const utils = require('./lib/utils');
-const txs = require('./lib/txs');
 
 let config;
 
