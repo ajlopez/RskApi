@@ -48,6 +48,7 @@ TBD
 - 0.0.9 send raw transaction
 - 0.0.10 support async/await; using simplejsonrpc 0.0.6
 - 0.0.11 new trace commands; get block using pending, latests, earlier
+- 0.0.12 get logs; client with transfer, deploy, invoke, call, generate account
 
 ## Contribution
 
