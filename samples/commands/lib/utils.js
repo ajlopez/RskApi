@@ -5,7 +5,7 @@ function loadConfiguration(filename) {
     try {
         return JSON.parse(fs.readFileSync(filename).toString());
     }
-    catch {
+    catch (ex) {
         return {
             host: null,
             accounts: {},

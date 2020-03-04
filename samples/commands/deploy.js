@@ -16,20 +16,25 @@ const sender = utils.getAccount(config, from);
 const client = rskapi.client(config.host);
 
 (async function() {
-    const txh = await client.deploy(sender, contract.bytecode, args);
-    console.log('transaction', txh);
-    const txr = await client.receipt(txh, 0);
-    
-    if (txr)
-        console.log('address', txr.contractAddress);
-    
-    config.instances[name] = {
-        address: txr.contractAddress,
-        contract: contractname
-    };
-    
-    utils.saveConfiguration('./config.json', config);
-    
-    console.log('done');
+    try {
+        const txh = await client.deploy(sender, contract.bytecode, args);
+        console.log('transaction', txh);
+        const txr = await client.receipt(txh, 0);
+        
+        if (txr)
+            console.log('address', txr.contractAddress);
+        
+        config.instances[name] = {
+            address: txr.contractAddress,
+            contract: contractname
+        };
+        
+        utils.saveConfiguration('./config.json', config);
+        
+        console.log('done');
+    }
+    catch (ex) {
+        console.log(ex);
+    }
 })();
 

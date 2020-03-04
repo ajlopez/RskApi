@@ -12,7 +12,12 @@ let args = utils.getArguments(config, process.argv[5]);
 const client = rskapi.client(config.host);
 
 (async function() {
-    const result = await client.call(from, to, fn, args);
-    console.log('result', result);
+    try {
+        const result = await client.call(from, to, fn, args);
+        console.log('result', result);
+    }
+    catch (ex) {
+        console.log(exception);
+    }
 })();
 
