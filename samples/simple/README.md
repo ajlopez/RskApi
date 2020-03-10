@@ -1,5 +1,27 @@
 # Simple Samples
 
+
+## Get Accounts
+
+Execute command:
+
+```
+node getaccounts <server>
+```
+
+The output is an array with the public address of the accounts that resides
+in the node wallet. Usually to use with nodes like ganache or RSKJ regtest.
+For security reasons, the node wallet (having the private keys of these accounts)
+should be avoided in production or testnet nodes.
+
+Example:
+
+```
+node getaccounts http://localhost:4444
+```
+
+
+
 ## Get Number
 
 Execute command:

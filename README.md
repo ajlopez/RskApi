@@ -16,13 +16,71 @@ npm install rskapi
 ## Usage
 
 Create the RSK API Object by calling the host function.
-```
-var rskapi = require('rskapi');
+```js
+const rskapi = require('rskapi');
 
-var rsk = rskapi.host('http://host.to.node.com:PORT');
+const client = rskapi.client('http://host.to.node.com:PORT');
 
 /** operations with the node **/
 ```
+
+Examples:
+```js
+const client = rskapi.client('http://localhost:8545') // ie ganache-client
+// or
+const client = rskapi.client('http://localhost:4444') // local rsk regtest
+// or
+const client = rskapi.client('https://public-node.testnet.rsk.co:443') // rsk testnet public node
+// or
+const client = rskapi.client('https://public-node.rsk.co:443') // rsk mainnet public node
+```
+
+## Client operations
+
+Given a client object, it can be invoked using a callback or as promise:
+
+```js
+// get best block number
+
+console.log(await client.number());  
+
+// or
+
+client.number(function (err, number) {
+    if (err)
+        console.log('error', err);
+    else
+        console.log(number);
+});
+```
+
+In the following descriptions, a promise is used.
+
+### Get best block number
+
+```js
+const number = await client.number();
+```
+
+### Get accounts
+
+```js
+const accounts = await client.accounts();
+```
+
+### Get account balance
+
+```js
+const balance = await client.balance(address);
+```
+
+### Get account nonce
+
+```js
+const nonce = await client.nonce(address);
+```
+
+
 
 ## References
 
