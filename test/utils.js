@@ -1,5 +1,5 @@
 
-const utils = require('../lib/utils');
+const utils = require('..').utils;
 const keccak256 = require('simpleabi/lib/sha3').keccak_256;
 const stringToBuffer = require('simpleabi').stringToBuffer;
 
