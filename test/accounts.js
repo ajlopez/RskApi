@@ -68,7 +68,7 @@ exports['get transaction count'] = function (test) {
 	test.async();
 	
 	provider.eth_getTransactionCount = function (hash, block) {
-		test.equal(block, 'latest');
+		test.equal(block, 'pending');
 		return '0x2a'
 	};
 	

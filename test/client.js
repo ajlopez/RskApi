@@ -62,7 +62,7 @@ exports['get nonce'] = async function (test) {
     
 	provider.eth_getTransactionCount = function (address, block) {
         test.equal(address, '0x0000000000000000000000000000000000000001');
-        test.equal(block, 'latest');
+        test.equal(block, 'pending');
         
 		return '0x2a';
 	};
