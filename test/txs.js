@@ -14,7 +14,7 @@ exports['get transaction by hash'] = function (test) {
 	
 	var host = rskapi.host(provider);
 	
-	host.getTransactionByHash('0x123456789abcdef0123456789abcdef0123456789abcdef0', function (err, data) {
+	host.getTransaction('0x123456789abcdef0123456789abcdef0123456789abcdef0', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(data.hash, '0x123456789abcdef0123456789abcdef0123456789abcdef0');
@@ -35,7 +35,7 @@ exports['get transaction by hash adding 0x'] = function (test) {
 	
 	var host = rskapi.host(provider);
 	
-	host.getTransactionByHash('123456789abcdef0', function (err, data) {
+	host.getTransaction('123456789abcdef0', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(data.hash, '0x123456789abcdef0');
@@ -56,7 +56,7 @@ exports['get transaction receipt by hash'] = function (test) {
 	
 	var host = rskapi.host(provider);
 	
-	host.getTransactionReceiptByHash('0x1234', function (err, data) {
+	host.getTransactionReceipt('0x1234', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(data.hash, '0x1234');

@@ -12,7 +12,7 @@ exports['get transaction by hash'] = async function (test) {
 	
 	const host = rskapi.host(provider);
 	
-	const tx = await host.getTransactionByHash('0x1234');
+	const tx = await host.getTransaction('0x1234');
     
     test.ok(tx);
     test.equal(tx.hash, '0x1234');
@@ -30,7 +30,7 @@ exports['get transaction receipt by hash'] = async function (test) {
 	
 	const host = rskapi.host(provider);
 	
-	const txr = await host.getTransactionReceiptByHash('0x1234');
+	const txr = await host.getTransactionReceipt('0x1234');
     
     test.ok(txr);
     test.equal(txr.hash, '0x1234');
