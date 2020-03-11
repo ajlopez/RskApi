@@ -15,7 +15,7 @@ exports['get transaction by hash'] = async function (test) {
 	const tx = await host.getTransaction('0x1234');
     
     test.ok(tx);
-    test.equal(tx.hash, '0x1234');
+    test.equal(tx.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
     test.done();
 };
 
@@ -33,7 +33,7 @@ exports['get transaction receipt by hash'] = async function (test) {
 	const txr = await host.getTransactionReceipt('0x1234');
     
     test.ok(txr);
-    test.equal(txr.hash, '0x1234');
+    test.equal(txr.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
     test.done();
 };
 

@@ -77,6 +77,26 @@ exports['get nonce'] = async function (test) {
     test.done();
 };
 
+exports['get transaction'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+
+	provider.eth_getTransactionByHash = function (hash) {
+        test.equal(hash, '0x0000000000000000000000000000000000000000000000000000000000000001');
+        return {};
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.transaction(1);
+    
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    
+    test.done();
+};
+
 exports['get receipt'] = async function (test) {
     test.async();
     

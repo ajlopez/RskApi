@@ -17,7 +17,7 @@ exports['get transaction by hash'] = function (test) {
 	host.getTransaction('0x123456789abcdef0123456789abcdef0123456789abcdef0', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
-		test.equal(data.hash, '0x123456789abcdef0123456789abcdef0123456789abcdef0');
+		test.equal(data.hash, '0x0000000000000000123456789abcdef0123456789abcdef0123456789abcdef0');
 		test.done();
 	});
 };
@@ -38,7 +38,7 @@ exports['get transaction by hash adding 0x'] = function (test) {
 	host.getTransaction('123456789abcdef0', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
-		test.equal(data.hash, '0x123456789abcdef0');
+		test.equal(data.hash, '0x000000000000000000000000000000000000000000000000123456789abcdef0');
 		test.done();
 	});
 };
@@ -59,7 +59,7 @@ exports['get transaction receipt by hash'] = function (test) {
 	host.getTransactionReceipt('0x1234', function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
-		test.equal(data.hash, '0x1234');
+		test.equal(data.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
 		test.done();
 	});
 };
