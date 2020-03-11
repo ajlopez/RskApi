@@ -13,6 +13,6 @@ const client = rskapi.client(config.host);
 (async function() {
     const balance = await client.balance(address);
     
-    console.log('balance', balance);
+    console.log('balance', parseInt(balance));
 })();
 

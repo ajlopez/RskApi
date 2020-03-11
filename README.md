@@ -146,6 +146,23 @@ If no nonce is provided, the next nonce available for the sender will be use.
 
 If no gas price is provided, the one informed by the host will be used.
 
+### Call contract
+
+```js
+const txhash = await client.call(sender, receiver, fn, args, options);
+```
+`sender` is an account (an address or an object with properties `address` and `privateKey`).
+
+`receiver` is the address of a contract already deployed.
+
+`fn` is an string with the full function signature to invoke, ie `transfer(address,uint256)`.
+
+`args` is an array with the function arguments.
+
+`options` is an object with properties like `value`.
+
+Being a call query and not a transaction, no `gasPrice`, `gas` or `nonce` is
+needed.
 
 ## References
 
