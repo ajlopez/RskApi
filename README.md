@@ -80,6 +80,71 @@ const balance = await client.balance(address);
 const nonce = await client.nonce(address);
 ```
 
+### Get transaction
+
+```js
+const tx = await client.transaction(hash);
+```
+
+### Get transaction receipt
+
+```js
+const tx = await client.receipt(hash, nseconds);
+```
+
+where `nseconds` is the number of seconds to try (one request per second). If zero,
+it waits forever.
+
+### Transfer
+
+```js
+const txhash = await client.transfer(sender, receiver, value, options);
+```
+
+`sender` and `receiver` are accounts, represented by their public address, or
+by an object with `address` and `privateKey` properties.
+
+`options` is an object with properties like `gas`, `gasPrice` and `nonce`.
+
+If no nonce is provided, the next nonce available for the sender will be use.
+
+If no gas price is provided, the one informed by the host will be used.
+
+### Deploy contract
+
+```js
+const txhash = await client.deploy(sender, bytecodes, args, options);
+```
+`sender` is an account (an address or an object with properties `address` and `privateKey`).
+
+`bytecodes` is an hexadecimal string starting with `0x`.
+
+`args` is an array with the constructor arguments. It could be `null`.
+
+`options` is an object with properties like `gas`, `gasPrice`, `value` and `nonce`.
+
+If no nonce is provided, the next nonce available for the sender will be use.
+
+If no gas price is provided, the one informed by the host will be used.
+
+### Invoke contract
+
+```js
+const txhash = await client.invoke(sender, receiver, fn, args, options);
+```
+`sender` is an account (an address or an object with properties `address` and `privateKey`).
+
+`receiver` is the address of a contract already deployed.
+
+`fn` is an string with the full function signature to invoke, ie `transfer(address,uint256)`.
+
+`args` is an array with the function arguments.
+
+`options` is an object with properties like `gas`, `gasPrice`, `value` and `nonce`.
+
+If no nonce is provided, the next nonce available for the sender will be use.
+
+If no gas price is provided, the one informed by the host will be used.
 
 
 ## References
@@ -91,7 +156,9 @@ const nonce = await client.nonce(address);
 
 ## Samples
 
-TBD
+Some simple samples at https://github.com/ajlopez/RskApi/tree/master/samples/simple.
+
+Some simple commands using a configuration file at https://github.com/ajlopez/RskApi/tree/master/samples/commands.
 
 ## Versions
 
