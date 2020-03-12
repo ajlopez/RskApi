@@ -22,27 +22,6 @@ exports['get transaction by hash'] = function (test) {
 	});
 };
 
-exports['get transaction by hash adding 0x'] = function (test) {
-	var provider = createProvider();
-	
-	test.async();
-	
-	provider.eth_getTransactionByHash = function (hash) {
-		return {
-			hash: hash
-		};
-	};
-	
-	var host = rskapi.host(provider);
-	
-	host.getTransaction('123456789abcdef0', function (err, data) {
-		test.equal(err, null);
-		test.ok(data);
-		test.equal(data.hash, '0x000000000000000000000000000000000000000000000000123456789abcdef0');
-		test.done();
-	});
-};
-
 exports['get transaction receipt by hash'] = function (test) {
 	var provider = createProvider();
 	
