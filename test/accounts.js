@@ -7,8 +7,10 @@ exports['get balance'] = function (test) {
 	test.async();
 	
 	provider.eth_getBalance = function (hash, block) {
+        test.equal(hash, '0x0000000000000000000000000000000000001234');
 		test.equal(block, 'latest');
-		return '0x2a'
+
+		return '0x2a';
 	};
 	
 	const host = rskapi.host(provider);
