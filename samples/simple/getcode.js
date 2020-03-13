@@ -1,8 +1,8 @@
 
-var rskapi = require('../..');
+const rskapi = require('../..');
 
-var host = rskapi.host(process.argv[2]);
-var hash = process.argv[3];
+const host = rskapi.host(process.argv[2]);
+const hash = process.argv[3];
 
 host.getCode(hash, function (err, data) {
 	if (err)
