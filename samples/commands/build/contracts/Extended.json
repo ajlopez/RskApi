@@ -1,0 +1,202 @@
+{
+  "contractName": "Extended",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "extended",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"extended\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/git/RskApi/samples/commands/contracts/Extended.sol\":\"Extended\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/git/RskApi/samples/commands/contracts/Extended.sol\":{\"keccak256\":\"0x2b64a104787d22d131dd14e6c67a7b82bfd39503ce11971da60fb3f62451db7c\",\"urls\":[\"bzzr://9c1115145ea79f0fa97f6cacb37c797656695bd94fb6744b98a2ec63e71398bc\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50608d8061001e6000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636f3921ee146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000602aa156fea165627a7a72305820f0792ec320465574be0b4fda5b19672eb917c6b6573dfe8cb0a8db230e8332c60029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636f3921ee146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000602aa156fea165627a7a72305820f0792ec320465574be0b4fda5b19672eb917c6b6573dfe8cb0a8db230e8332c60029",
+  "sourceMap": "35:120:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:120:4;;;;;;;",
+  "deployedSourceMap": "35:120:4:-;;;;;;;;;;;;;;;;;;;;;;;;60:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:92:4;;;;;;;132:1;130;127:2;122:12;107:38::o",
+  "source": "pragma solidity >=0.5.0 <0.6.0;\r\n\r\ncontract Extended {\r\n    function extended() public {\r\n        assembly {\r\n            log1(42,0,1)\r\n        }\r\n    }\r\n}",
+  "sourcePath": "C:/git/RskApi/samples/commands/contracts/Extended.sol",
+  "ast": {
+    "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
+    "exportedSymbols": {
+      "Extended": [
+        225
+      ]
+    },
+    "id": 226,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 219,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 225,
+        "linearizedBaseContracts": [
+          225
+        ],
+        "name": "Extended",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 223,
+              "nodeType": "Block",
+              "src": "87:65:4",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 222,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    log1(42, 0, 1)\n}",
+                  "src": "98:54:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 224,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "extended",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 220,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "77:2:4"
+            },
+            "returnParameters": {
+              "id": 221,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "87:0:4"
+            },
+            "scope": 225,
+            "src": "60:92:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 226,
+        "src": "35:120:4"
+      }
+    ],
+    "src": "0:155:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
+    "exportedSymbols": {
+      "Extended": [
+        225
+      ]
+    },
+    "id": 226,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 219,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 225,
+        "linearizedBaseContracts": [
+          225
+        ],
+        "name": "Extended",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 223,
+              "nodeType": "Block",
+              "src": "87:65:4",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 222,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    log1(42, 0, 1)\n}",
+                  "src": "98:54:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 224,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "extended",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 220,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "77:2:4"
+            },
+            "returnParameters": {
+              "id": 221,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "87:0:4"
+            },
+            "scope": 225,
+            "src": "60:92:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 226,
+        "src": "35:120:4"
+      }
+    ],
+    "src": "0:155:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-12-19T11:32:49.781Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

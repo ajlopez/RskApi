@@ -1,0 +1,202 @@
+{
+  "contractName": "Jumps",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "jumps",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"jumps\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/git/RskApi/samples/commands/contracts/Jumps.sol\":\"Jumps\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/git/RskApi/samples/commands/contracts/Jumps.sol\":{\"keccak256\":\"0xb63fac01c78778668f13bae035287ee02476166540a2c3935695de3189173b61\",\"urls\":[\"bzzr://619ca6535618ed96d8fb58a19b4dd5a189c5597fec320954c69f27228ba3f03a\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50608d8061001e6000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063aabcc7ba146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000602aa156fea165627a7a72305820636101362c12a9a3b8779f56863a45da171002723c90927b16f6ed78ce6bfc5d0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063aabcc7ba146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000602aa156fea165627a7a72305820636101362c12a9a3b8779f56863a45da171002723c90927b16f6ed78ce6bfc5d0029",
+  "sourceMap": "35:114:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:114:4;;;;;;;",
+  "deployedSourceMap": "35:114:4:-;;;;;;;;;;;;;;;;;;;;;;;;57:89;;8:9:-1;5:2;;;30:1;27;20:12;5:2;57:89:4;;;;;;;126:1;124;121:2;116:12;101:38::o",
+  "source": "pragma solidity >=0.5.0 <0.6.0;\r\n\r\ncontract Jumps {\r\n    function jumps() public {\r\n        assembly {\r\n            log1(42,0,1)\r\n        }\r\n    }\r\n}",
+  "sourcePath": "C:/git/RskApi/samples/commands/contracts/Jumps.sol",
+  "ast": {
+    "absolutePath": "/C/git/RskApi/samples/commands/contracts/Jumps.sol",
+    "exportedSymbols": {
+      "Jumps": [
+        225
+      ]
+    },
+    "id": 226,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 219,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 225,
+        "linearizedBaseContracts": [
+          225
+        ],
+        "name": "Jumps",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 223,
+              "nodeType": "Block",
+              "src": "81:65:4",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 222,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    log1(42, 0, 1)\n}",
+                  "src": "92:54:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 224,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "jumps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 220,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "71:2:4"
+            },
+            "returnParameters": {
+              "id": 221,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:0:4"
+            },
+            "scope": 225,
+            "src": "57:89:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 226,
+        "src": "35:114:4"
+      }
+    ],
+    "src": "0:149:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/git/RskApi/samples/commands/contracts/Jumps.sol",
+    "exportedSymbols": {
+      "Jumps": [
+        225
+      ]
+    },
+    "id": 226,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 219,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 225,
+        "linearizedBaseContracts": [
+          225
+        ],
+        "name": "Jumps",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 223,
+              "nodeType": "Block",
+              "src": "81:65:4",
+              "statements": [
+                {
+                  "externalReferences": [],
+                  "id": 222,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    log1(42, 0, 1)\n}",
+                  "src": "92:54:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 224,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "jumps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 220,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "71:2:4"
+            },
+            "returnParameters": {
+              "id": 221,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:0:4"
+            },
+            "scope": 225,
+            "src": "57:89:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 226,
+        "src": "35:114:4"
+      }
+    ],
+    "src": "0:149:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-12-19T10:23:58.439Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
