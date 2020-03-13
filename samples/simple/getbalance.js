@@ -1,10 +1,10 @@
 
-var rskapi = require('../..');
+const rskapi = require('../..');
 
-var host = rskapi.host(process.argv[2]);
-var hash = process.argv[3];
+const host = rskapi.host(process.argv[2]);
+const address = process.argv[3];
 
-host.getBalance(hash, function (err, data) {
+host.getBalance(address, function (err, data) {
 	if (err)
 		console.log('error', err);
 	else

@@ -1,7 +1,7 @@
 
-var rskapi = require('../..');
+const rskapi = require('../..');
 
-var host = rskapi.host(process.argv[2]);
+const host = rskapi.host(process.argv[2]);
 
 host.getAccounts(function (err, data) {
 	if (err)
