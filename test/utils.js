@@ -3,6 +3,30 @@ const utils = require('..').utils;
 const keccak256 = require('simpleabi/lib/sha3').keccak_256;
 const stringToBuffer = require('simpleabi').stringToBuffer;
 
+const zeroes = '0x0000000000000000000000000000000000000000000000000000000000000000';
+
+function toValue(text) {
+    return zeroes.substring(0, zeroes.length - text.length) + text;
+}
+
+function toAddress(text) {
+    return zeroes.substring(0, zeroes.length - 12 * 2 - text.length) + text;
+}
+
+exports['encode value'] = function (test) {
+    test.equal(utils.toHexValue(0), zeroes);
+    test.equal(utils.toHexValue(1), toValue('1'));
+    test.equal(utils.toHexValue(42), toValue('2a'));
+    test.equal(utils.toHexValue('0x2a'), toValue('2a'));
+}
+
+exports['encode address'] = function (test) {
+    test.equal(utils.toHexAddress(0), toAddress('0'));
+    test.equal(utils.toHexAddress(1), toAddress('1'));
+    test.equal(utils.toHexAddress(42), toAddress('2a'));
+    test.equal(utils.toHexAddress('0x2a'), toAddress('2a'));
+}
+
 exports['block to hex'] = function (test) {
     test.equal(utils.toHexBlock('earliest'), 'earliest');
     test.equal(utils.toHexBlock('latest'), 'latest');
