@@ -1,6 +1,6 @@
 
-const rskapi = require('../..');
 const utils = require('./lib/utils');
+const rskapi = utils.rskapi;
 
 const config = utils.loadConfiguration('./config.json');
 

@@ -1,6 +1,16 @@
 
 const fs = require('fs');
 
+let rskapi = null;
+let localrskapi = null;
+
+try {
+    rskapi = require('rskapi');
+}
+catch (ex) {
+    localrskapi = require('../../..');
+}
+
 function loadConfiguration(filename) {
     try {
         return JSON.parse(fs.readFileSync(filename).toString());
@@ -95,6 +105,8 @@ function processArguments(config, args) {
 }
 
 module.exports = {
+    rskapi: rskapi ? rskapi : localrskapi,
+    
     getAddress: getAddress,
     getInstanceAddress: getInstanceAddress,
     getAccount: getAccount,
