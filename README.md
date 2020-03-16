@@ -193,6 +193,10 @@ Some simple commands using a configuration file at https://github.com/ajlopez/Rs
 - 0.0.12 get logs; client with transfer, deploy, invoke, call, generate account
 - 0.0.13 first utils; get nonce using pending
 
+## Posts
+
+- [A library and commands to interact with RSK and Ethereum nodes](https://medium.com/@angeljavalopez/a-library-and-commands-to-interact-with-rsk-and-ethereum-nodes-cff644659598) [markdown version](https://github.com/ajlopez/RskApi/blob/master/post.md)
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/RskApi) and submit
