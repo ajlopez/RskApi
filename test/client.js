@@ -99,6 +99,29 @@ exports['get code'] = async function (test) {
     test.done();
 };
 
+exports['get storage'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getStorageAt = function (address, offset, block) {
+        test.equal(address, '0x000000000000000000000000000000000000000a');
+        test.equal(offset, '0x0000000000000000000000000000000000000000000000000000000000000001');
+        test.equal(block, 'latest');
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.storage(10, 1);
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['get transaction'] = async function (test) {
     test.async();
     

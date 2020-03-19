@@ -48,8 +48,9 @@ exports['get storage at'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getStorageAt = function (hash, address, block) {
-		test.equal(address, '0x2a');
+	provider.eth_getStorageAt = function (address, offset, block) {
+        test.equal(address, '0x0000000000000000000000000000000000001234');
+        test.equal(offset, '0x000000000000000000000000000000000000000000000000000000000000002a');
 		test.equal(block, 'latest');
 		return '0x1234';
 	};
