@@ -478,6 +478,64 @@ exports['call contract using options and address'] = async function (test) {
     test.done();
 };
 
+exports['get peers count'] = async function (test) {
+    test.async();
+
+	const provider = createProvider();
+	
+	provider.net_peerCount = function (hash) {
+		return '0x2a'
+	};
+	
+	const client = rskapi.client(provider);
+    
+    const result = await client.npeers();
+    
+    test.equal(result, 42);
+    
+    test.done();
+};
+
+exports['get peer list'] = async function (test) {
+	test.async();
+	
+	const provider = createProvider();
+	
+	provider.net_peerList = function (hash) {
+		return [];
+	};
+	
+	const client = rskapi.client(provider);
+	
+	const result = await client.peers();
+
+    test.ok(result);
+    test.ok(Array.isArray(result));
+    test.equal(result.length, 0);
+    
+    test.done();
+};
+
+exports['get scoring peer list'] = async function (test) {
+	test.async();
+	
+	const provider = createProvider();
+	
+	provider.sco_peerList = function (hash) {
+		return [];
+	};
+	
+	const client = rskapi.client(provider);
+	
+	const result = await client.scoring();
+    
+    test.ok(result);
+    test.ok(Array.isArray(result));
+    test.equal(result.length, 0);
+    
+    test.done();
+};
+
 function createProvider() {
 	return {
 		call: function (method, args, cb) {
