@@ -192,6 +192,7 @@ Some simple commands using a configuration file at https://github.com/ajlopez/Rs
 - 0.0.11 new trace commands; get block using pending, latests, earlier
 - 0.0.12 get logs; client with transfer, deploy, invoke, call, generate account
 - 0.0.13 first utils; get nonce using pending
+- 0.0.14 client get storage, get peer list, get peer count, get scoring list, format addresses and values
 
 ## Posts
 
