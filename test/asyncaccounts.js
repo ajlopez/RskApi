@@ -62,7 +62,7 @@ exports['get transaction count'] = async function (test) {
 	const provider = createProvider();
 	
 	provider.eth_getTransactionCount = function (hash, block) {
-		test.equal(block, 'latest');
+		test.equal(block, 'pending');
 		return '0x2a'
 	};
 	
@@ -74,7 +74,6 @@ exports['get transaction count'] = async function (test) {
     test.equal(count, '0x2a');
     test.done();
 };
-
 
 exports['get transaction count using account hash and block'] = async function (test) {
 	const provider = createProvider();

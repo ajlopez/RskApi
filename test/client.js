@@ -77,6 +77,28 @@ exports['get nonce'] = async function (test) {
     test.done();
 };
 
+exports['get nonce with block'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getTransactionCount = function (address, block) {
+        test.equal(address, '0x0000000000000000000000000000000000000001');
+        test.equal(block, 'latest');
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.nonce(1, 'latest');
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['get code'] = async function (test) {
     test.async();
     
