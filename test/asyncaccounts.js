@@ -4,8 +4,8 @@ const rskapi = require('..');
 exports['get balance'] = async function (test) {
 	const provider = createProvider();
 	
-	provider.eth_getBalance = function (hash, block) {
-        test.equal(hash, '0x0000000000000000000000000000000000001234');
+	provider.eth_getBalance = function (address, block) {
+        test.equal(address, '0x0000000000000000000000000000000000001234');
 		test.equal(block, 'latest');
 		return '0x2a'
 	};
@@ -13,6 +13,24 @@ exports['get balance'] = async function (test) {
 	const host = rskapi.host(provider);
 	
 	const balance = await host.getBalance('0x1234');
+
+    test.ok(balance);
+    test.equal(balance, '0x2a');
+    test.done();
+};
+
+exports['get balance using account'] = async function (test) {
+	const provider = createProvider();
+	
+	provider.eth_getBalance = function (address, block) {
+        test.equal(address, '0x0000000000000000000000000000000000001234');
+		test.equal(block, '0x2a');
+		return '0x2a'
+	};
+	
+	const host = rskapi.host(provider);
+	
+	const balance = await host.getBalance('0x1234', 42);
 
     test.ok(balance);
     test.equal(balance, '0x2a');

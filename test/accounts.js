@@ -23,6 +23,28 @@ exports['get balance'] = function (test) {
 	});
 };
 
+exports['get balance using block'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBalance = function (address, block) {
+        test.equal(address, '0x0000000000000000000000000000000000001234');
+		test.equal(block, '0x2a');
+
+		return '0x2a';
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.getBalance('0x1234', 42, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, '0x2a');
+		test.done();
+	});
+};
+
 exports['get code'] = function (test) {
 	const provider = createProvider();
 	
