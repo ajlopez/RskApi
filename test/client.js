@@ -55,6 +55,28 @@ exports['get balance'] = async function (test) {
     test.done();
 };
 
+exports['get balance using block'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getBalance = function (address, block) {
+        test.equal(address, '0x0000000000000000000000000000000000000001');
+        test.equal(block, '0x2a');
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.balance(1, 42);
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['get nonce'] = async function (test) {
     test.async();
     
