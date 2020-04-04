@@ -76,7 +76,7 @@ exports['get block by hash'] = async function (test) {
     test.ok(block);
     test.equal(typeof block, 'object');
     
-    test.equal(block.hash, '0x1234');
+    test.equal(block.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
 		
     test.done();
 };

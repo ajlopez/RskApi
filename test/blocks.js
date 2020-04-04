@@ -206,7 +206,7 @@ exports['get block by hash'] = function (test) {
 		test.ok(data);
 		test.equal(typeof data, 'object');
 		
-		test.equal(data.hash, '0x1234');
+		test.equal(data.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
 		
 		test.done();
 	});
