@@ -782,7 +782,7 @@
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 255,
+                      "referencedDeclaration": 280,
                       "src": "587:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
@@ -956,10 +956,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        250,
-                        251
+                        275,
+                        276
                       ],
-                      "referencedDeclaration": 251,
+                      "referencedDeclaration": 276,
                       "src": "676:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1208,7 +1208,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 234,
+                                "referencedDeclaration": 259,
                                 "src": "885:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1255,7 +1255,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 241,
+                          "referencedDeclaration": 266,
                           "src": "875:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2172,7 +2172,7 @@
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 255,
+                      "referencedDeclaration": 280,
                       "src": "587:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
@@ -2346,10 +2346,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        250,
-                        251
+                        275,
+                        276
                       ],
-                      "referencedDeclaration": 251,
+                      "referencedDeclaration": 276,
                       "src": "676:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2598,7 +2598,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 234,
+                                "referencedDeclaration": 259,
                                 "src": "885:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -2645,7 +2645,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 241,
+                          "referencedDeclaration": 266,
                           "src": "875:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -2880,7 +2880,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-04-09T18:38:34.765Z",
+  "updatedAt": "2020-04-09T19:10:27.008Z",
   "devdoc": {
     "methods": {}
   },

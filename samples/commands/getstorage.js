@@ -14,7 +14,7 @@ const client = rskapi.client(config.host);
 
 (async function() {
     try {
-        const value = await client.storage(address, offset);
+        let value = await client.storage(address, offset);
         
         // TODO review
         if (value === null)
