@@ -11,13 +11,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"noreturn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/git/RskApi/samples/commands/contracts/CallNoReturn.sol\":\"CallNoReturn\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/git/RskApi/samples/commands/contracts/CallNoReturn.sol\":{\"keccak256\":\"0x3a771ef58be6857f4ee2b66aefabac236934ecc659b0d24a50d3918cf63679e5\",\"urls\":[\"bzzr://a749136f27f9c5003901eabf40f988208fee60d87af51d34894d6eb0f7fb4886\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b5060868061001e6000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630f965a41146044575b600080fd5b348015604f57600080fd5b5060566058565b005b56fea165627a7a72305820ed3355ab58b1171eca06cfdddc3d6f1a9cdf82929c9adeb8959b495e3b4ad6e80029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630f965a41146044575b600080fd5b348015604f57600080fd5b5060566058565b005b56fea165627a7a72305820ed3355ab58b1171eca06cfdddc3d6f1a9cdf82929c9adeb8959b495e3b4ad6e80029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"noreturn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/git/RskApi/samples/commands/contracts/CallNoReturn.sol\":\"CallNoReturn\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/git/RskApi/samples/commands/contracts/CallNoReturn.sol\":{\"keccak256\":\"0x3a771ef58be6857f4ee2b66aefabac236934ecc659b0d24a50d3918cf63679e5\",\"urls\":[\"bzz-raw://16da22f6d863e51cb1b36486b540978ed383c6152958d16dff1171e3e234c579\",\"dweb:/ipfs/QmdJCvwPvVUVfzhTSXmZfz2Cw3HQ7HMeNBvUZPwnojsvGd\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50606c80601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80630f965a4114602d575b600080fd5b60336035565b005b56fea265627a7a72315820d7ba7f1673bf66c9098db657e12fbe27fb6e63a651f2b593a36699b22d7320ba64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80630f965a4114602d575b600080fd5b60336035565b005b56fea265627a7a72315820d7ba7f1673bf66c9098db657e12fbe27fb6e63a651f2b593a36699b22d7320ba64736f6c63430005100032",
   "sourceMap": "35:72:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:72:0;;;;;;;",
-  "deployedSourceMap": "35:72:0:-;;;;;;;;;;;;;;;;;;;;;;;;64:40;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:40:0;;;;;;;:::o",
+  "deployedSourceMap": "35:72:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:72:0;;;;;;;;;;;;;;;;;;;64:40;;;:::i;:::-;;;:::o",
   "source": "pragma solidity >=0.5.0 <0.6.0;\r\n\r\ncontract CallNoReturn {\r\n    function noreturn() public pure {\r\n    }\r\n}\r\n\r\n",
-  "sourcePath": "C:/git/RskApi/samples/commands/contracts/CallNoReturn.sol",
+  "sourcePath": "C:\\git\\RskApi\\samples\\commands\\contracts\\CallNoReturn.sol",
   "ast": {
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/CallNoReturn.sol",
     "exportedSymbols": {
@@ -172,11 +172,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.8",
-  "updatedAt": "2019-11-16T15:29:02.731Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-09T18:38:34.763Z",
   "devdoc": {
     "methods": {}
   },
