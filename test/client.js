@@ -166,6 +166,65 @@ exports['get storage'] = async function (test) {
     test.done();
 };
 
+exports['get block by number'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getBlockByNumber = function (number, txs) {
+        test.strictEqual(txs, false);
+        
+		return number;
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.block(42);
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['get block by hexa number'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getBlockByNumber = function (number) {
+		return number
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.block('0x2a');
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['get block by hash'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_getBlockByHash = function (hash) {
+		return hash
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.block('0x00000000000000000000000000000000000000001234');
+    
+    test.ok(result);
+    test.equal(result, '0x0000000000000000000000000000000000000000000000000000000000001234');
+    
+    test.done();
+};
+
 exports['get transaction'] = async function (test) {
     test.async();
     

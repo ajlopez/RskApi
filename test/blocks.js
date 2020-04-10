@@ -25,7 +25,9 @@ exports['get block by number'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBlockByNumber = function (number) {
+	provider.eth_getBlockByNumber = function (number, txs) {
+        test.strictEqual(txs, false);
+        
 		return {
 			number: number
 		}
@@ -34,6 +36,32 @@ exports['get block by number'] = function (test) {
 	const host = rskapi.host(provider);
 	
 	host.getBlockByNumber(42, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.number, '0x2a');
+		
+		test.done();
+	});
+};
+
+exports['get block by number with full transactions'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByNumber = function (number, txs) {
+        test.strictEqual(txs, true);
+        
+		return {
+			number: number
+		}
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.getBlockByNumber(42, true, function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(typeof data, 'object');
@@ -193,7 +221,9 @@ exports['get block by hash'] = function (test) {
 	
 	test.async();
 	
-	provider.eth_getBlockByHash = function (hash) {
+	provider.eth_getBlockByHash = function (hash, txs) {
+        test.strictEqual(txs, false);
+        
 		return {
 			hash: hash
 		}
@@ -202,6 +232,32 @@ exports['get block by hash'] = function (test) {
 	const host = rskapi.host(provider);
 	
 	host.getBlockByHash('0x1234', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(typeof data, 'object');
+		
+		test.equal(data.hash, '0x0000000000000000000000000000000000000000000000000000000000001234');
+		
+		test.done();
+	});
+};
+
+exports['get block by hash with full transactions'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_getBlockByHash = function (hash, txs) {
+        test.strictEqual(txs, true);
+        
+		return {
+			hash: hash
+		}
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.getBlockByHash('0x1234', true, function (err, data) {
 		test.equal(err, null);
 		test.ok(data);
 		test.equal(typeof data, 'object');
