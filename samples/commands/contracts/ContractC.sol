@@ -7,7 +7,7 @@ contract ContractC {
         counter++;
     }
     
-    function success(uint value) public {
+    function success(uint value) pure public {
         require(value > 0, "value should be positive");
     }
 }

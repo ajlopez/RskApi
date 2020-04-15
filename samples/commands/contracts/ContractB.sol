@@ -13,7 +13,7 @@ contract ContractB {
         c.invoke();
     }
     
-    function success(uint value) public {
+    function success(uint value) view public {
         require(value > 0, "value should be positive");
         c.success(value - 1);
     }
