@@ -14,10 +14,15 @@ const receiver = utils.getAddress(config, to);
 const client = rskapi.client(config.host);
 
 (async function() {
-    const txh = await client.transfer(sender, receiver, value);
-    console.log('transaction', txh);
-    const txr = await client.receipt(txh, 0);
-    
-    console.log(parseInt(txr.status) ? 'done' : 'failed');
+    try {
+        const txh = await client.transfer(sender, receiver, value);
+        console.log('transaction', txh);
+        const txr = await client.receipt(txh, 0);
+        
+        console.log(parseInt(txr.status) ? 'done' : 'failed');
+    }
+    catch (ex) {
+        console.log(ex);
+    }
 })();
 
