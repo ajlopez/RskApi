@@ -189,6 +189,27 @@ exports['list personal accounts'] = function (test) {
 	});
 };
 
+exports['import personal raw key'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.personal_importRawKey = function (privateKey, passphrase) {
+        test.equal('123456', privateKey);
+        test.equal('et in arcadia ego', passphrase);
+		return 'address';
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.importPersonalRawKey('123456', 'et in arcadia ego', function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, 'address');
+		test.done();
+	});
+};
+
 exports['unlock personal account using passphrase'] = function (test) {
 	const provider = createProvider();
 	

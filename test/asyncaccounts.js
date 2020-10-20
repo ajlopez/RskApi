@@ -162,6 +162,24 @@ exports['list personal accounts'] = async function (test) {
     test.done();
 };
 
+exports['import personal raw key'] = async function (test) {
+	const provider = createProvider();
+	
+	provider.personal_importRawKey = function (privateKey, passphrase) {
+        test.equal('123456', privateKey);
+        test.equal('et in arcadia ego', passphrase);
+		return 'address';
+	};
+	
+	const host = rskapi.host(provider);
+	
+	const result = await host.importPersonalRawKey('123456', 'et in arcadia ego');
+    
+    test.ok(result);
+    test.deepEqual(result, 'address');
+    test.done();
+};
+
 exports['unlock personal account using passphrase'] = async function (test) {
 	const provider = createProvider();
 	
