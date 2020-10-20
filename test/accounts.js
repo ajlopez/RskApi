@@ -170,6 +170,25 @@ exports['new personal account using passphrase'] = function (test) {
 	});
 };
 
+exports['list personal accounts'] = function (test) {
+	const provider = createProvider();
+	
+	test.async();
+	
+	provider.personal_listAccounts = function () {
+		return ['world'];
+	};
+	
+	const host = rskapi.host(provider);
+	
+	host.listPersonalAccounts(function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.deepEqual(data, ['world']);
+		test.done();
+	});
+};
+
 exports['unlock personal account using passphrase'] = function (test) {
 	const provider = createProvider();
 	

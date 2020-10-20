@@ -146,6 +146,22 @@ exports['new personal account using passphrase'] = async function (test) {
     test.done();
 };
 
+exports['list personal accounts'] = async function (test) {
+	const provider = createProvider();
+	
+	provider.personal_listAccounts = function () {
+		return ['world'];
+	};
+	
+	const host = rskapi.host(provider);
+	
+	const result = await host.listPersonalAccounts();
+    
+    test.ok(result);
+    test.deepEqual(result, ['world']);
+    test.done();
+};
+
 exports['unlock personal account using passphrase'] = async function (test) {
 	const provider = createProvider();
 	
