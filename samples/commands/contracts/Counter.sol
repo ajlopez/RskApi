@@ -11,6 +11,11 @@ contract Counter {
         counter += value;
     }
     
+    function incrementFail() public {
+        counter++;
+        require(false, "fail error");
+    }
+    
     function fail() public pure {
         require(false, "fail error");
     }

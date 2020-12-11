@@ -64,14 +64,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveParent.sol",
     "exportedSymbols": {
       "RecursiveParent": [
-        351
+        363
       ]
     },
-    "id": 352,
+    "id": 364,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 309,
+        "id": 321,
         "literals": [
           "solidity",
           ">=",
@@ -87,10 +87,10 @@
       {
         "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveInterface.sol",
         "file": "./RecursiveInterface.sol",
-        "id": 310,
+        "id": 322,
         "nodeType": "ImportDirective",
-        "scope": 352,
-        "sourceUnit": 308,
+        "scope": 364,
+        "sourceUnit": 320,
         "src": "35:34:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -98,10 +98,10 @@
       {
         "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveChild.sol",
         "file": "./RecursiveChild.sol",
-        "id": 311,
+        "id": 323,
         "nodeType": "ImportDirective",
-        "scope": 352,
-        "sourceUnit": 300,
+        "scope": 364,
+        "sourceUnit": 312,
         "src": "71:30:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -112,42 +112,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 312,
+              "id": 324,
               "name": "RecursiveInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 307,
+              "referencedDeclaration": 319,
               "src": "133:18:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RecursiveInterface_$307",
+                "typeIdentifier": "t_contract$_RecursiveInterface_$319",
                 "typeString": "contract RecursiveInterface"
               }
             },
-            "id": 313,
+            "id": 325,
             "nodeType": "InheritanceSpecifier",
             "src": "133:18:9"
           }
         ],
         "contractDependencies": [
-          299,
-          307
+          311,
+          319
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 351,
+        "id": 363,
         "linearizedBaseContracts": [
-          351,
-          307
+          363,
+          319
         ],
         "name": "RecursiveParent",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 315,
+            "id": 327,
             "name": "counter",
             "nodeType": "VariableDeclaration",
-            "scope": 351,
+            "scope": 363,
             "src": "159:19:9",
             "stateVariable": true,
             "storageLocation": "default",
@@ -156,7 +156,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 314,
+              "id": 326,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "159:4:9",
@@ -170,26 +170,26 @@
           },
           {
             "constant": false,
-            "id": 317,
+            "id": 329,
             "name": "recursive",
             "nodeType": "VariableDeclaration",
-            "scope": 351,
+            "scope": 363,
             "src": "185:31:9",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RecursiveChild_$299",
+              "typeIdentifier": "t_contract$_RecursiveChild_$311",
               "typeString": "contract RecursiveChild"
             },
             "typeName": {
               "contractScope": null,
-              "id": 316,
+              "id": 328,
               "name": "RecursiveChild",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 299,
+              "referencedDeclaration": 311,
               "src": "185:14:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                "typeIdentifier": "t_contract$_RecursiveChild_$311",
                 "typeString": "contract RecursiveChild"
               }
             },
@@ -198,28 +198,28 @@
           },
           {
             "body": {
-              "id": 327,
+              "id": 339,
               "nodeType": "Block",
               "src": "250:55:9",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 325,
+                    "id": 337,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 320,
+                      "id": 332,
                       "name": "recursive",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 317,
+                      "referencedDeclaration": 329,
                       "src": "261:9:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                        "typeIdentifier": "t_contract$_RecursiveChild_$311",
                         "typeString": "contract RecursiveChild"
                       }
                     },
@@ -230,14 +230,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 323,
+                          "id": 335,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 398,
+                          "referencedDeclaration": 410,
                           "src": "292:4:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RecursiveParent_$351",
+                            "typeIdentifier": "t_contract$_RecursiveParent_$363",
                             "typeString": "contract RecursiveParent"
                           }
                         }
@@ -245,11 +245,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_RecursiveParent_$351",
+                            "typeIdentifier": "t_contract$_RecursiveParent_$363",
                             "typeString": "contract RecursiveParent"
                           }
                         ],
-                        "id": 322,
+                        "id": 334,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -257,23 +257,23 @@
                         "nodeType": "NewExpression",
                         "src": "273:18:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_RecursiveInterface_$307_$returns$_t_contract$_RecursiveChild_$299_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_RecursiveInterface_$319_$returns$_t_contract$_RecursiveChild_$311_$",
                           "typeString": "function (contract RecursiveInterface) returns (contract RecursiveChild)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 321,
+                          "id": 333,
                           "name": "RecursiveChild",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 299,
+                          "referencedDeclaration": 311,
                           "src": "277:14:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                            "typeIdentifier": "t_contract$_RecursiveChild_$311",
                             "typeString": "contract RecursiveChild"
                           }
                         }
                       },
-                      "id": 324,
+                      "id": 336,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -283,42 +283,42 @@
                       "nodeType": "FunctionCall",
                       "src": "273:24:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                        "typeIdentifier": "t_contract$_RecursiveChild_$311",
                         "typeString": "contract RecursiveChild"
                       }
                     },
                     "src": "261:36:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                      "typeIdentifier": "t_contract$_RecursiveChild_$311",
                       "typeString": "contract RecursiveChild"
                     }
                   },
-                  "id": 326,
+                  "id": 338,
                   "nodeType": "ExpressionStatement",
                   "src": "261:36:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 328,
+            "id": 340,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 318,
+              "id": 330,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "240:2:9"
             },
             "returnParameters": {
-              "id": 319,
+              "id": 331,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "250:0:9"
             },
-            "scope": 351,
+            "scope": 363,
             "src": "229:76:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -326,7 +326,7 @@
           },
           {
             "body": {
-              "id": 349,
+              "id": 361,
               "nodeType": "Block",
               "src": "355:139:9",
               "statements": [
@@ -337,18 +337,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 335,
+                    "id": 347,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 345,
                       "name": "level",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 330,
+                      "referencedDeclaration": 342,
                       "src": "370:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -360,7 +360,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 334,
+                      "id": 346,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -382,13 +382,13 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 337,
+                  "id": 349,
                   "nodeType": "IfStatement",
                   "src": "366:36:9",
                   "trueBody": {
                     "expression": null,
-                    "functionReturnParameters": 332,
-                    "id": 336,
+                    "functionReturnParameters": 344,
+                    "id": 348,
                     "nodeType": "Return",
                     "src": "395:7:9"
                   }
@@ -396,7 +396,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 339,
+                    "id": 351,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -407,11 +407,11 @@
                     "src": "426:9:9",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 338,
+                      "id": 350,
                       "name": "counter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 315,
+                      "referencedDeclaration": 327,
                       "src": "426:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -423,7 +423,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 340,
+                  "id": 352,
                   "nodeType": "ExpressionStatement",
                   "src": "426:9:9"
                 },
@@ -437,18 +437,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 346,
+                        "id": 358,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 344,
+                          "id": 356,
                           "name": "level",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 330,
+                          "referencedDeclaration": 342,
                           "src": "476:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -460,7 +460,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 345,
+                          "id": 357,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -491,32 +491,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 341,
+                        "id": 353,
                         "name": "recursive",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 317,
+                        "referencedDeclaration": 329,
                         "src": "456:9:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                          "typeIdentifier": "t_contract$_RecursiveChild_$311",
                           "typeString": "contract RecursiveChild"
                         }
                       },
-                      "id": 343,
+                      "id": 355,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 298,
+                      "referencedDeclaration": 310,
                       "src": "456:19:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256) external"
                       }
                     },
-                    "id": 347,
+                    "id": 359,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -530,29 +530,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 348,
+                  "id": 360,
                   "nodeType": "ExpressionStatement",
                   "src": "456:30:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 350,
+            "id": 362,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "increment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 331,
+              "id": 343,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 330,
+                  "id": 342,
                   "name": "level",
                   "nodeType": "VariableDeclaration",
-                  "scope": 350,
+                  "scope": 362,
                   "src": "336:10:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -561,7 +561,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 329,
+                    "id": 341,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "336:4:9",
@@ -577,19 +577,19 @@
               "src": "335:12:9"
             },
             "returnParameters": {
-              "id": 332,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "355:0:9"
             },
-            "scope": 351,
+            "scope": 363,
             "src": "317:177:9",
             "stateMutability": "nonpayable",
-            "superFunction": 306,
+            "superFunction": 318,
             "visibility": "public"
           }
         ],
-        "scope": 352,
+        "scope": 364,
         "src": "105:392:9"
       }
     ],
@@ -599,14 +599,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveParent.sol",
     "exportedSymbols": {
       "RecursiveParent": [
-        351
+        363
       ]
     },
-    "id": 352,
+    "id": 364,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 309,
+        "id": 321,
         "literals": [
           "solidity",
           ">=",
@@ -622,10 +622,10 @@
       {
         "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveInterface.sol",
         "file": "./RecursiveInterface.sol",
-        "id": 310,
+        "id": 322,
         "nodeType": "ImportDirective",
-        "scope": 352,
-        "sourceUnit": 308,
+        "scope": 364,
+        "sourceUnit": 320,
         "src": "35:34:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -633,10 +633,10 @@
       {
         "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveChild.sol",
         "file": "./RecursiveChild.sol",
-        "id": 311,
+        "id": 323,
         "nodeType": "ImportDirective",
-        "scope": 352,
-        "sourceUnit": 300,
+        "scope": 364,
+        "sourceUnit": 312,
         "src": "71:30:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -647,42 +647,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 312,
+              "id": 324,
               "name": "RecursiveInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 307,
+              "referencedDeclaration": 319,
               "src": "133:18:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RecursiveInterface_$307",
+                "typeIdentifier": "t_contract$_RecursiveInterface_$319",
                 "typeString": "contract RecursiveInterface"
               }
             },
-            "id": 313,
+            "id": 325,
             "nodeType": "InheritanceSpecifier",
             "src": "133:18:9"
           }
         ],
         "contractDependencies": [
-          299,
-          307
+          311,
+          319
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 351,
+        "id": 363,
         "linearizedBaseContracts": [
-          351,
-          307
+          363,
+          319
         ],
         "name": "RecursiveParent",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 315,
+            "id": 327,
             "name": "counter",
             "nodeType": "VariableDeclaration",
-            "scope": 351,
+            "scope": 363,
             "src": "159:19:9",
             "stateVariable": true,
             "storageLocation": "default",
@@ -691,7 +691,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 314,
+              "id": 326,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "159:4:9",
@@ -705,26 +705,26 @@
           },
           {
             "constant": false,
-            "id": 317,
+            "id": 329,
             "name": "recursive",
             "nodeType": "VariableDeclaration",
-            "scope": 351,
+            "scope": 363,
             "src": "185:31:9",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RecursiveChild_$299",
+              "typeIdentifier": "t_contract$_RecursiveChild_$311",
               "typeString": "contract RecursiveChild"
             },
             "typeName": {
               "contractScope": null,
-              "id": 316,
+              "id": 328,
               "name": "RecursiveChild",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 299,
+              "referencedDeclaration": 311,
               "src": "185:14:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                "typeIdentifier": "t_contract$_RecursiveChild_$311",
                 "typeString": "contract RecursiveChild"
               }
             },
@@ -733,28 +733,28 @@
           },
           {
             "body": {
-              "id": 327,
+              "id": 339,
               "nodeType": "Block",
               "src": "250:55:9",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 325,
+                    "id": 337,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 320,
+                      "id": 332,
                       "name": "recursive",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 317,
+                      "referencedDeclaration": 329,
                       "src": "261:9:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                        "typeIdentifier": "t_contract$_RecursiveChild_$311",
                         "typeString": "contract RecursiveChild"
                       }
                     },
@@ -765,14 +765,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 323,
+                          "id": 335,
                           "name": "this",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 398,
+                          "referencedDeclaration": 410,
                           "src": "292:4:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RecursiveParent_$351",
+                            "typeIdentifier": "t_contract$_RecursiveParent_$363",
                             "typeString": "contract RecursiveParent"
                           }
                         }
@@ -780,11 +780,11 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_RecursiveParent_$351",
+                            "typeIdentifier": "t_contract$_RecursiveParent_$363",
                             "typeString": "contract RecursiveParent"
                           }
                         ],
-                        "id": 322,
+                        "id": 334,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -792,23 +792,23 @@
                         "nodeType": "NewExpression",
                         "src": "273:18:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_RecursiveInterface_$307_$returns$_t_contract$_RecursiveChild_$299_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_contract$_RecursiveInterface_$319_$returns$_t_contract$_RecursiveChild_$311_$",
                           "typeString": "function (contract RecursiveInterface) returns (contract RecursiveChild)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 321,
+                          "id": 333,
                           "name": "RecursiveChild",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 299,
+                          "referencedDeclaration": 311,
                           "src": "277:14:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                            "typeIdentifier": "t_contract$_RecursiveChild_$311",
                             "typeString": "contract RecursiveChild"
                           }
                         }
                       },
-                      "id": 324,
+                      "id": 336,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -818,42 +818,42 @@
                       "nodeType": "FunctionCall",
                       "src": "273:24:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                        "typeIdentifier": "t_contract$_RecursiveChild_$311",
                         "typeString": "contract RecursiveChild"
                       }
                     },
                     "src": "261:36:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                      "typeIdentifier": "t_contract$_RecursiveChild_$311",
                       "typeString": "contract RecursiveChild"
                     }
                   },
-                  "id": 326,
+                  "id": 338,
                   "nodeType": "ExpressionStatement",
                   "src": "261:36:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 328,
+            "id": 340,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 318,
+              "id": 330,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "240:2:9"
             },
             "returnParameters": {
-              "id": 319,
+              "id": 331,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "250:0:9"
             },
-            "scope": 351,
+            "scope": 363,
             "src": "229:76:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -861,7 +861,7 @@
           },
           {
             "body": {
-              "id": 349,
+              "id": 361,
               "nodeType": "Block",
               "src": "355:139:9",
               "statements": [
@@ -872,18 +872,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 335,
+                    "id": 347,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 345,
                       "name": "level",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 330,
+                      "referencedDeclaration": 342,
                       "src": "370:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -895,7 +895,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 334,
+                      "id": 346,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -917,13 +917,13 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 337,
+                  "id": 349,
                   "nodeType": "IfStatement",
                   "src": "366:36:9",
                   "trueBody": {
                     "expression": null,
-                    "functionReturnParameters": 332,
-                    "id": 336,
+                    "functionReturnParameters": 344,
+                    "id": 348,
                     "nodeType": "Return",
                     "src": "395:7:9"
                   }
@@ -931,7 +931,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 339,
+                    "id": 351,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -942,11 +942,11 @@
                     "src": "426:9:9",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 338,
+                      "id": 350,
                       "name": "counter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 315,
+                      "referencedDeclaration": 327,
                       "src": "426:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -958,7 +958,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 340,
+                  "id": 352,
                   "nodeType": "ExpressionStatement",
                   "src": "426:9:9"
                 },
@@ -972,18 +972,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 346,
+                        "id": 358,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 344,
+                          "id": 356,
                           "name": "level",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 330,
+                          "referencedDeclaration": 342,
                           "src": "476:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -995,7 +995,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 345,
+                          "id": 357,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1026,32 +1026,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 341,
+                        "id": 353,
                         "name": "recursive",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 317,
+                        "referencedDeclaration": 329,
                         "src": "456:9:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RecursiveChild_$299",
+                          "typeIdentifier": "t_contract$_RecursiveChild_$311",
                           "typeString": "contract RecursiveChild"
                         }
                       },
-                      "id": 343,
+                      "id": 355,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 298,
+                      "referencedDeclaration": 310,
                       "src": "456:19:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256) external"
                       }
                     },
-                    "id": 347,
+                    "id": 359,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1065,29 +1065,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 348,
+                  "id": 360,
                   "nodeType": "ExpressionStatement",
                   "src": "456:30:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 350,
+            "id": 362,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "increment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 331,
+              "id": 343,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 330,
+                  "id": 342,
                   "name": "level",
                   "nodeType": "VariableDeclaration",
-                  "scope": 350,
+                  "scope": 362,
                   "src": "336:10:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1096,7 +1096,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 329,
+                    "id": 341,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "336:4:9",
@@ -1112,19 +1112,19 @@
               "src": "335:12:9"
             },
             "returnParameters": {
-              "id": 332,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "355:0:9"
             },
-            "scope": 351,
+            "scope": 363,
             "src": "317:177:9",
             "stateMutability": "nonpayable",
-            "superFunction": 306,
+            "superFunction": 318,
             "visibility": "public"
           }
         ],
-        "scope": 352,
+        "scope": 364,
         "src": "105:392:9"
       }
     ],
@@ -1136,7 +1136,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-04-15T14:47:15.838Z",
+  "updatedAt": "2020-12-10T22:55:43.986Z",
   "devdoc": {
     "methods": {}
   },
