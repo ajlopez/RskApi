@@ -40,7 +40,10 @@ function getAddress(config, user) {
             return config.accounts[user];
         
     if (config.instances && config.instances[user])
-        return config.instances[user].address;
+        if (config.instances[user].address)
+            return config.instances[user].address;
+        else
+            return config.instances[user];
         
     return user;
 }
@@ -86,7 +89,10 @@ function processArgument(config, arg) {
             return config.accounts[arg];
         
     if (config.instances && config.instances[arg])
-        return config.instances[arg].address;
+        if (config.instances[arg].address)
+            return config.instances[arg].address;
+        else
+            return config.instances[arg];
         
     return arg;
 }
