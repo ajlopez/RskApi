@@ -131,6 +131,19 @@ function getConfigurationOptions(config) {
     return options;
 }
 
+function getContract(name) {
+    let contract;
+    
+    try {
+        contract = require('../build/contracts/' + name + '.json');
+    }
+    catch (ex) {
+        contract = require('../../build/contracts/' + name + '.json');
+    }
+    
+    return contract;
+}
+
 module.exports = {
     rskapi: rskapi ? rskapi : localrskapi,
     
@@ -142,6 +155,8 @@ module.exports = {
     
     loadConfiguration: loadConfiguration,
     saveConfiguration: saveConfiguration,
-    getConfigurationOptions: getConfigurationOptions
+    getConfigurationOptions: getConfigurationOptions,
+    
+    getContract: getContract
 };
 

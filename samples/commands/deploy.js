@@ -9,7 +9,7 @@ const name = process.argv[3];
 const contractname = process.argv[4];
 let args = utils.getArguments(config, process.argv[5]);
 
-const contract = require('./build/contracts/' + contractname + '.json');
+const contract = utils.getContract(contractname);
 
 const sender = utils.getAccount(config, from);
 
