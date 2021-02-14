@@ -82,6 +82,12 @@ function getValue(value) {
 }
 
 function processArgument(config, arg) {
+    if (arg.length && arg[0] === '"' && arg[arg.length - 1] === '"')
+            return arg.substring(1, arg.length - 1);
+        
+    if (arg.length && arg[0] === "'" && arg[arg.length - 1] === "'")
+            return arg.substring(1, arg.length - 1);
+        
     if (config.accounts && config.accounts[arg])
         if (config.accounts[arg].address)
             return config.accounts[arg].address;
@@ -102,12 +108,27 @@ function processArguments(config, args) {
         return null;
     
     if (typeof args === 'string')
-        args = args.split(';');
+        args = args.split(',');
     
     for (let k = 0, l = args.length; k < l; k++)
         args[k] = processArgument(config, args[k]);
     
     return args;
+}
+
+function getConfigurationOptions(config) {
+    const options = {};
+    
+    if (!config || !config.options)
+        return options;
+    
+    if (config.options.gas)
+        options.gas = config.options.gas;
+    
+    if (config.options.gasPrice)
+        options.gasPrice = config.options.gasPrice;
+    
+    return options;
 }
 
 module.exports = {
@@ -120,6 +141,7 @@ module.exports = {
     getArguments: processArguments,
     
     loadConfiguration: loadConfiguration,
-    saveConfiguration: saveConfiguration
+    saveConfiguration: saveConfiguration,
+    getConfigurationOptions: getConfigurationOptions
 };
 

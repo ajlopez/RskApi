@@ -78,10 +78,10 @@ node call alice counter1 counter()
 ```
 node invoke root counter1 increment()
 node invoke alice counter1 add(uint256) 42
-node invoke alice token1 transfer(address,uint256) charlie;1000
+node invoke alice token1 transfer(address,uint256) charlie,1000
 ```
 
-If the invocation has more than one argument, they are separated by semicolons.
+If the invocation has more than one argument, they are separated by commas.
 
 
 
