@@ -23,7 +23,7 @@
     "dependencies": {
         "ethereumjs-tx": "^1.3.7",
         "ethereumjs-util": "6.1.0",
-        "simpleabi": "0.0.6",
+        "simpleabi": "0.0.7",
         "simplejsonrpc": "0.0.6"
     },
     "devDependencies": {
