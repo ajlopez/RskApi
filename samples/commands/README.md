@@ -23,9 +23,9 @@ has 10 accounts and `rskj` local/regtest has 11 accounts available to use.
 ## New account
 
 ```
-node newaccount alice
-node newaccount bob
-node newaccount charlie
+node genaccount alice
+node genaccount bob
+node genaccount charlie
 ```
 
 New accounts are created, with private keys, public keys and addresses.
@@ -58,6 +58,13 @@ by the network.
 node transfer root alice 1000000000
 ```
 
+Internally, it uses `21000` gas units. If you need to transfer to a contract,
+an additional argument with the gas to use could be provided:
+
+```
+node transfer root alice 1000000000 100000
+```
+
 ## Deploy contract
 ```
 node deploy counter1 Counter
@@ -81,7 +88,8 @@ node invoke alice counter1 add(uint256) 42
 node invoke alice token1 transfer(address,uint256) charlie,1000
 ```
 
-If the invocation has more than one argument, they are separated by commas.
+If the invocation has more than one argument,
+ they are separated by commas.
 
 
 
