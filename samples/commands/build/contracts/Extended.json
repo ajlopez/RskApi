@@ -22,14 +22,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
     "exportedSymbols": {
       "Extended": [
-        244
+        251
       ]
     },
-    "id": 245,
+    "id": 252,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 238,
+        "id": 245,
         "literals": [
           "solidity",
           ">=",
@@ -48,22 +48,22 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 244,
+        "id": 251,
         "linearizedBaseContracts": [
-          244
+          251
         ],
         "name": "Extended",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 242,
+              "id": 249,
               "nodeType": "Block",
               "src": "87:65:5",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 241,
+                  "id": 248,
                   "nodeType": "InlineAssembly",
                   "operations": "{ log1(42, 0, 1) }",
                   "src": "98:47:5"
@@ -71,32 +71,32 @@
               ]
             },
             "documentation": null,
-            "id": 243,
+            "id": 250,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "extended",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 239,
+              "id": 246,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "77:2:5"
             },
             "returnParameters": {
-              "id": 240,
+              "id": 247,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "87:0:5"
             },
-            "scope": 244,
+            "scope": 251,
             "src": "60:92:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 245,
+        "scope": 252,
         "src": "35:120:5"
       }
     ],
@@ -106,14 +106,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
     "exportedSymbols": {
       "Extended": [
-        244
+        251
       ]
     },
-    "id": 245,
+    "id": 252,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 238,
+        "id": 245,
         "literals": [
           "solidity",
           ">=",
@@ -132,22 +132,22 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 244,
+        "id": 251,
         "linearizedBaseContracts": [
-          244
+          251
         ],
         "name": "Extended",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 242,
+              "id": 249,
               "nodeType": "Block",
               "src": "87:65:5",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 241,
+                  "id": 248,
                   "nodeType": "InlineAssembly",
                   "operations": "{ log1(42, 0, 1) }",
                   "src": "98:47:5"
@@ -155,32 +155,32 @@
               ]
             },
             "documentation": null,
-            "id": 243,
+            "id": 250,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "extended",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 239,
+              "id": 246,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "77:2:5"
             },
             "returnParameters": {
-              "id": 240,
+              "id": 247,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "87:0:5"
             },
-            "scope": 244,
+            "scope": 251,
             "src": "60:92:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 245,
+        "scope": 252,
         "src": "35:120:5"
       }
     ],
@@ -192,7 +192,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-02-17T17:22:46.590Z",
+  "updatedAt": "2021-02-19T17:08:56.416Z",
   "devdoc": {
     "methods": {}
   },

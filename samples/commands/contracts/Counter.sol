@@ -8,6 +8,7 @@ contract Counter {
     }
     
     function add(uint value) public {
+        require(value != 0, "value should not be zero");
         counter += value;
     }
     

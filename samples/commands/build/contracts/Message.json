@@ -55,14 +55,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Message.sol",
     "exportedSymbols": {
       "Message": [
-        269
+        276
       ]
     },
-    "id": 270,
+    "id": 277,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 246,
+        "id": 253,
         "literals": [
           "solidity",
           ">=",
@@ -81,19 +81,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 269,
+        "id": 276,
         "linearizedBaseContracts": [
-          269
+          276
         ],
         "name": "Message",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 248,
+            "id": 255,
             "name": "message",
             "nodeType": "VariableDeclaration",
-            "scope": 269,
+            "scope": 276,
             "src": "59:21:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -102,7 +102,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 247,
+              "id": 254,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "59:6:6",
@@ -116,25 +116,25 @@
           },
           {
             "body": {
-              "id": 257,
+              "id": 264,
               "nodeType": "Block",
               "src": "142:43:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 255,
+                    "id": 262,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 253,
+                      "id": 260,
                       "name": "message",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 248,
+                      "referencedDeclaration": 255,
                       "src": "153:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -145,11 +145,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 254,
+                      "id": 261,
                       "name": "initialmessage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 250,
+                      "referencedDeclaration": 257,
                       "src": "163:14:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -162,29 +162,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 256,
+                  "id": 263,
                   "nodeType": "ExpressionStatement",
                   "src": "153:24:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 258,
+            "id": 265,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 251,
+              "id": 258,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 250,
+                  "id": 257,
                   "name": "initialmessage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 258,
+                  "scope": 265,
                   "src": "105:28:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -193,7 +193,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 249,
+                    "id": 256,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "105:6:6",
@@ -209,12 +209,12 @@
               "src": "104:30:6"
             },
             "returnParameters": {
-              "id": 252,
+              "id": 259,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "142:0:6"
             },
-            "scope": 269,
+            "scope": 276,
             "src": "93:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -222,25 +222,25 @@
           },
           {
             "body": {
-              "id": 267,
+              "id": 274,
               "nodeType": "Block",
               "src": "250:39:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 265,
+                    "id": 272,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 263,
+                      "id": 270,
                       "name": "message",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 248,
+                      "referencedDeclaration": 255,
                       "src": "261:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -251,11 +251,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 264,
+                      "id": 271,
                       "name": "newmessage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 260,
+                      "referencedDeclaration": 267,
                       "src": "271:10:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -268,29 +268,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 266,
+                  "id": 273,
                   "nodeType": "ExpressionStatement",
                   "src": "261:20:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 268,
+            "id": 275,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setMessage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 261,
+              "id": 268,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 260,
+                  "id": 267,
                   "name": "newmessage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 268,
+                  "scope": 275,
                   "src": "217:24:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -299,7 +299,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 259,
+                    "id": 266,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "217:6:6",
@@ -315,19 +315,19 @@
               "src": "216:26:6"
             },
             "returnParameters": {
-              "id": 262,
+              "id": 269,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "250:0:6"
             },
-            "scope": 269,
+            "scope": 276,
             "src": "197:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 270,
+        "scope": 277,
         "src": "35:257:6"
       }
     ],
@@ -337,14 +337,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Message.sol",
     "exportedSymbols": {
       "Message": [
-        269
+        276
       ]
     },
-    "id": 270,
+    "id": 277,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 246,
+        "id": 253,
         "literals": [
           "solidity",
           ">=",
@@ -363,19 +363,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 269,
+        "id": 276,
         "linearizedBaseContracts": [
-          269
+          276
         ],
         "name": "Message",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 248,
+            "id": 255,
             "name": "message",
             "nodeType": "VariableDeclaration",
-            "scope": 269,
+            "scope": 276,
             "src": "59:21:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -384,7 +384,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 247,
+              "id": 254,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "59:6:6",
@@ -398,25 +398,25 @@
           },
           {
             "body": {
-              "id": 257,
+              "id": 264,
               "nodeType": "Block",
               "src": "142:43:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 255,
+                    "id": 262,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 253,
+                      "id": 260,
                       "name": "message",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 248,
+                      "referencedDeclaration": 255,
                       "src": "153:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -427,11 +427,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 254,
+                      "id": 261,
                       "name": "initialmessage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 250,
+                      "referencedDeclaration": 257,
                       "src": "163:14:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -444,29 +444,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 256,
+                  "id": 263,
                   "nodeType": "ExpressionStatement",
                   "src": "153:24:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 258,
+            "id": 265,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 251,
+              "id": 258,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 250,
+                  "id": 257,
                   "name": "initialmessage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 258,
+                  "scope": 265,
                   "src": "105:28:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -475,7 +475,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 249,
+                    "id": 256,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "105:6:6",
@@ -491,12 +491,12 @@
               "src": "104:30:6"
             },
             "returnParameters": {
-              "id": 252,
+              "id": 259,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "142:0:6"
             },
-            "scope": 269,
+            "scope": 276,
             "src": "93:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -504,25 +504,25 @@
           },
           {
             "body": {
-              "id": 267,
+              "id": 274,
               "nodeType": "Block",
               "src": "250:39:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 265,
+                    "id": 272,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 263,
+                      "id": 270,
                       "name": "message",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 248,
+                      "referencedDeclaration": 255,
                       "src": "261:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -533,11 +533,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 264,
+                      "id": 271,
                       "name": "newmessage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 260,
+                      "referencedDeclaration": 267,
                       "src": "271:10:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -550,29 +550,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 266,
+                  "id": 273,
                   "nodeType": "ExpressionStatement",
                   "src": "261:20:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 268,
+            "id": 275,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setMessage",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 261,
+              "id": 268,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 260,
+                  "id": 267,
                   "name": "newmessage",
                   "nodeType": "VariableDeclaration",
-                  "scope": 268,
+                  "scope": 275,
                   "src": "217:24:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -581,7 +581,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 259,
+                    "id": 266,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "217:6:6",
@@ -597,19 +597,19 @@
               "src": "216:26:6"
             },
             "returnParameters": {
-              "id": 262,
+              "id": 269,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "250:0:6"
             },
-            "scope": 269,
+            "scope": 276,
             "src": "197:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 270,
+        "scope": 277,
         "src": "35:257:6"
       }
     ],
@@ -621,7 +621,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-02-17T17:22:46.593Z",
+  "updatedAt": "2021-02-19T17:08:56.418Z",
   "devdoc": {
     "methods": {}
   },

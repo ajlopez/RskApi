@@ -54,14 +54,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/UpdateStorage.sol",
     "exportedSymbols": {
       "UpdateStorage": [
-        384
+        391
       ]
     },
-    "id": 385,
+    "id": 392,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 365,
+        "id": 372,
         "literals": [
           "solidity",
           ">=",
@@ -80,19 +80,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 384,
+        "id": 391,
         "linearizedBaseContracts": [
-          384
+          391
         ],
         "name": "UpdateStorage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 369,
+            "id": 376,
             "name": "values",
             "nodeType": "VariableDeclaration",
-            "scope": 384,
+            "scope": 391,
             "src": "65:23:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -102,7 +102,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 366,
+                "id": 373,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "65:4:10",
@@ -111,11 +111,11 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 368,
+              "id": 375,
               "length": {
                 "argumentTypes": null,
                 "hexValue": "313030",
-                "id": 367,
+                "id": 374,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -142,14 +142,14 @@
           },
           {
             "body": {
-              "id": 382,
+              "id": 389,
               "nodeType": "Block",
               "src": "153:43:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 380,
+                    "id": 387,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -158,25 +158,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 376,
+                        "id": 383,
                         "name": "values",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 369,
+                        "referencedDeclaration": 376,
                         "src": "164:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_uint256_$100_storage",
                           "typeString": "uint256[100] storage ref"
                         }
                       },
-                      "id": 378,
+                      "id": 385,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 377,
+                        "id": 384,
                         "name": "position",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 371,
+                        "referencedDeclaration": 378,
                         "src": "171:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -198,11 +198,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 379,
+                      "id": 386,
                       "name": "value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 373,
+                      "referencedDeclaration": 380,
                       "src": "183:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -215,29 +215,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 381,
+                  "id": 388,
                   "nodeType": "ExpressionStatement",
                   "src": "164:24:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 383,
+            "id": 390,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 374,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 371,
+                  "id": 378,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 383,
+                  "scope": 390,
                   "src": "119:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -246,7 +246,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 370,
+                    "id": 377,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "119:4:10",
@@ -260,10 +260,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 380,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 383,
+                  "scope": 390,
                   "src": "134:10:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -272,7 +272,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 379,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "134:4:10",
@@ -288,19 +288,19 @@
               "src": "118:27:10"
             },
             "returnParameters": {
-              "id": 375,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "153:0:10"
             },
-            "scope": 384,
+            "scope": 391,
             "src": "101:95:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 385,
+        "scope": 392,
         "src": "35:164:10"
       }
     ],
@@ -310,14 +310,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/UpdateStorage.sol",
     "exportedSymbols": {
       "UpdateStorage": [
-        384
+        391
       ]
     },
-    "id": 385,
+    "id": 392,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 365,
+        "id": 372,
         "literals": [
           "solidity",
           ">=",
@@ -336,19 +336,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 384,
+        "id": 391,
         "linearizedBaseContracts": [
-          384
+          391
         ],
         "name": "UpdateStorage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 369,
+            "id": 376,
             "name": "values",
             "nodeType": "VariableDeclaration",
-            "scope": 384,
+            "scope": 391,
             "src": "65:23:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -358,7 +358,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 366,
+                "id": 373,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "65:4:10",
@@ -367,11 +367,11 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 368,
+              "id": 375,
               "length": {
                 "argumentTypes": null,
                 "hexValue": "313030",
-                "id": 367,
+                "id": 374,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -398,14 +398,14 @@
           },
           {
             "body": {
-              "id": 382,
+              "id": 389,
               "nodeType": "Block",
               "src": "153:43:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 380,
+                    "id": 387,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -414,25 +414,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 376,
+                        "id": 383,
                         "name": "values",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 369,
+                        "referencedDeclaration": 376,
                         "src": "164:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_uint256_$100_storage",
                           "typeString": "uint256[100] storage ref"
                         }
                       },
-                      "id": 378,
+                      "id": 385,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 377,
+                        "id": 384,
                         "name": "position",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 371,
+                        "referencedDeclaration": 378,
                         "src": "171:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -454,11 +454,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 379,
+                      "id": 386,
                       "name": "value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 373,
+                      "referencedDeclaration": 380,
                       "src": "183:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -471,29 +471,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 381,
+                  "id": 388,
                   "nodeType": "ExpressionStatement",
                   "src": "164:24:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 383,
+            "id": 390,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 374,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 371,
+                  "id": 378,
                   "name": "position",
                   "nodeType": "VariableDeclaration",
-                  "scope": 383,
+                  "scope": 390,
                   "src": "119:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -502,7 +502,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 370,
+                    "id": 377,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "119:4:10",
@@ -516,10 +516,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 380,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 383,
+                  "scope": 390,
                   "src": "134:10:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -528,7 +528,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 379,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "134:4:10",
@@ -544,19 +544,19 @@
               "src": "118:27:10"
             },
             "returnParameters": {
-              "id": 375,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "153:0:10"
             },
-            "scope": 384,
+            "scope": 391,
             "src": "101:95:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 385,
+        "scope": 392,
         "src": "35:164:10"
       }
     ],
@@ -568,7 +568,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-02-17T17:22:46.600Z",
+  "updatedAt": "2021-02-19T17:08:56.425Z",
   "devdoc": {
     "methods": {}
   },
