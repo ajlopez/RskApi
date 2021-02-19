@@ -17,7 +17,7 @@ const client = rskapi.client(config.host);
         console.log('result', result);
     }
     catch (ex) {
-        console.log(exception);
+        console.log(ex);
     }
 })();
 
