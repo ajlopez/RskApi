@@ -166,6 +166,25 @@ exports['get storage'] = async function (test) {
     test.done();
 };
 
+exports['get block number'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+	provider.eth_blockNumber = function () {
+		return 42;
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.number();
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['get block by number'] = async function (test) {
     test.async();
     
