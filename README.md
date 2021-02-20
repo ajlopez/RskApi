@@ -200,6 +200,11 @@ Some simple commands using a configuration file at https://github.com/ajlopez/Rs
 
 - [A library and commands to interact with RSK and Ethereum nodes](https://medium.com/@angeljavalopez/a-library-and-commands-to-interact-with-rsk-and-ethereum-nodes-cff644659598) [markdown version](https://github.com/ajlopez/RskApi/blob/master/post.md)
 
+## To Do
+
+- deploy command with constructor types
+- block height parameter in some methods
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/RskApi) and submit
