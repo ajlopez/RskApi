@@ -447,6 +447,113 @@ exports['deploy contract'] = async function (test) {
     test.done();
 };
 
+exports['deploy contract with value in options'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+    const code = '0x010203';
+    
+    provider.eth_gasPrice = function () {
+        return '0x2a';
+    };
+    
+	provider.eth_sendTransaction = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.ok(!tx.to);
+        test.equal(tx.gasPrice, 42);
+        test.equal(tx.gas, 5000000);
+        test.equal(tx.value, 100000);
+        test.ok(tx.nonce == null);
+        test.equal(tx.data, code);
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.deploy(1, code, null, { value: 100000 });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['deploy contract with hexa argument'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+    const code = '0x010203';
+    const arg = '0x040506';
+    
+    provider.eth_gasPrice = function () {
+        return '0x2a';
+    };
+    
+	provider.eth_sendTransaction = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.ok(!tx.to);
+        test.equal(tx.gasPrice, 42);
+        test.equal(tx.gas, 5000000);
+        test.equal(tx.value, 0);
+        test.ok(tx.nonce == null);
+        test.equal(tx.data, code + simpleabi.encodeValues([ arg ]));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.deploy(1, code, [ arg ]);
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
+exports['deploy contract with bytes argument'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+    const code = '0x010203';
+    const arg = '0x040506';
+    
+    provider.eth_gasPrice = function () {
+        return '0x2a';
+    };
+    
+	provider.eth_sendTransaction = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.ok(!tx.to);
+        test.equal(tx.gasPrice, 42);
+        test.equal(tx.gas, 5000000);
+        test.equal(tx.value, 0);
+        test.ok(tx.nonce == null);
+        test.equal(tx.data, code + simpleabi.encodeValues([ arg ], [ 'bytes' ]));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.deploy(1, code, [ arg ], { types: [ 'bytes' ] });
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['invoke contract'] = async function (test) {
     test.async();
     
