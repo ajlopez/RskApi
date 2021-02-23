@@ -14,22 +14,22 @@
   "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"extended\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/git/RskApi/samples/commands/contracts/Extended.sol\":\"Extended\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/git/RskApi/samples/commands/contracts/Extended.sol\":{\"keccak256\":\"0x2b64a104787d22d131dd14e6c67a7b82bfd39503ce11971da60fb3f62451db7c\",\"urls\":[\"bzz-raw://41f20209aa820725fd16abb0ce6420fcf6b4c9934f52814c77d55fb9082ee3f3\",\"dweb:/ipfs/Qmb4Wubomq3NmvHedRL3RAjRUjinqwbDHVt9kVhbs5tVuF\"]}},\"version\":1}",
   "bytecode": "0x6080604052348015600f57600080fd5b50607380601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80636f3921ee14602d575b600080fd5b60336035565b005b60016000602aa156fea265627a7a723158200f00b53884094d707d2e5282244c2eefb3058fd1897f622f1e44ec06c008eaab64736f6c63430005100032",
   "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80636f3921ee14602d575b600080fd5b60336035565b005b60016000602aa156fea265627a7a723158200f00b53884094d707d2e5282244c2eefb3058fd1897f622f1e44ec06c008eaab64736f6c63430005100032",
-  "sourceMap": "35:120:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:120:5;;;;;;;",
-  "deployedSourceMap": "35:120:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:120:5;;;;;;;;;;;;;;;;;;;60:92;;;:::i;:::-;;;132:1;130;127:2;122:12;107:38::o",
+  "sourceMap": "35:120:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:120:6;;;;;;;",
+  "deployedSourceMap": "35:120:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;35:120:6;;;;;;;;;;;;;;;;;;;60:92;;;:::i;:::-;;;132:1;130;127:2;122:12;107:38::o",
   "source": "pragma solidity >=0.5.0 <0.6.0;\r\n\r\ncontract Extended {\r\n    function extended() public {\r\n        assembly {\r\n            log1(42,0,1)\r\n        }\r\n    }\r\n}",
   "sourcePath": "C:\\git\\RskApi\\samples\\commands\\contracts\\Extended.sol",
   "ast": {
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
     "exportedSymbols": {
       "Extended": [
-        251
+        270
       ]
     },
-    "id": 252,
+    "id": 271,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 245,
+        "id": 264,
         "literals": [
           "solidity",
           ">=",
@@ -40,7 +40,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:5"
+        "src": "0:31:6"
       },
       {
         "baseContracts": [],
@@ -48,72 +48,72 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 251,
+        "id": 270,
         "linearizedBaseContracts": [
-          251
+          270
         ],
         "name": "Extended",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 249,
+              "id": 268,
               "nodeType": "Block",
-              "src": "87:65:5",
+              "src": "87:65:6",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 248,
+                  "id": 267,
                   "nodeType": "InlineAssembly",
                   "operations": "{ log1(42, 0, 1) }",
-                  "src": "98:47:5"
+                  "src": "98:47:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 250,
+            "id": 269,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "extended",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 246,
+              "id": 265,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "77:2:5"
+              "src": "77:2:6"
             },
             "returnParameters": {
-              "id": 247,
+              "id": 266,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "87:0:5"
+              "src": "87:0:6"
             },
-            "scope": 251,
-            "src": "60:92:5",
+            "scope": 270,
+            "src": "60:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 252,
-        "src": "35:120:5"
+        "scope": 271,
+        "src": "35:120:6"
       }
     ],
-    "src": "0:155:5"
+    "src": "0:155:6"
   },
   "legacyAST": {
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/Extended.sol",
     "exportedSymbols": {
       "Extended": [
-        251
+        270
       ]
     },
-    "id": 252,
+    "id": 271,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 245,
+        "id": 264,
         "literals": [
           "solidity",
           ">=",
@@ -124,7 +124,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:5"
+        "src": "0:31:6"
       },
       {
         "baseContracts": [],
@@ -132,59 +132,59 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 251,
+        "id": 270,
         "linearizedBaseContracts": [
-          251
+          270
         ],
         "name": "Extended",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 249,
+              "id": 268,
               "nodeType": "Block",
-              "src": "87:65:5",
+              "src": "87:65:6",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 248,
+                  "id": 267,
                   "nodeType": "InlineAssembly",
                   "operations": "{ log1(42, 0, 1) }",
-                  "src": "98:47:5"
+                  "src": "98:47:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 250,
+            "id": 269,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "extended",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 246,
+              "id": 265,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "77:2:5"
+              "src": "77:2:6"
             },
             "returnParameters": {
-              "id": 247,
+              "id": 266,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "87:0:5"
+              "src": "87:0:6"
             },
-            "scope": 251,
-            "src": "60:92:5",
+            "scope": 270,
+            "src": "60:92:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 252,
-        "src": "35:120:5"
+        "scope": 271,
+        "src": "35:120:6"
       }
     ],
-    "src": "0:155:5"
+    "src": "0:155:6"
   },
   "compiler": {
     "name": "solc",
@@ -192,7 +192,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-02-19T17:08:56.416Z",
+  "updatedAt": "2021-02-23T18:21:14.322Z",
   "devdoc": {
     "methods": {}
   },

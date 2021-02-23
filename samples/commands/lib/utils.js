@@ -11,6 +11,35 @@ catch (ex) {
     localrskapi = require('../../..');
 }
 
+const maxdecdigits = Number.MAX_SAFE_INTEGER.toString(10).length;
+const maxhexadigits = Number.MAX_SAFE_INTEGER.toString(16).length;
+
+function getHexadecimalValue(value) {
+    while (value[0] === '0' && value.length > 1)
+        value = value.substring(1);
+    
+    if (value.length >= maxhexadigits)
+        return new BN(value, 16).toString();
+    
+    return parseInt(value, 16);
+}
+
+function getValue(value) {
+    if (typeof value !== 'string')
+        return value;
+    
+    if (value.startsWith('0x'))
+        return getHexadecimalValue(value.substring(2));
+    
+    while (value[0] === '0' && value.length > 1)
+        value = value.substring(1);
+    
+    if (value.length >= maxdecdigits)
+        return value;
+    
+    return parseInt(value);
+}
+
 function loadConfiguration(filename) {
     try {
         return JSON.parse(fs.readFileSync(filename).toString());
@@ -72,13 +101,6 @@ function getAccount(config, user) {
         return config.accounts[user];
         
     return user;
-}
-
-function getValue(value) {
-    if (typeof value === 'string' && value.substring(0, 2).toLowerCase() === '0x')
-        return value;
-    
-    return parseInt(value);
 }
 
 function processArgument(config, arg) {

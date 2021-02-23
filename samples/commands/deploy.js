@@ -33,17 +33,20 @@ const options = utils.getConfigurationOptions(config);
         
         const txr = await client.receipt(txh, 0);
         
-        if (txr)
+        if (txr && parseInt(txr.status)) {
             console.log('address', txr.contractAddress);
         
-        config.instances[name] = {
-            address: txr.contractAddress,
-            contract: contractname
-        };
-        
-        utils.saveConfiguration('./config.json', config);
-        
-        console.log('done');
+            config.instances[name] = {
+                address: txr.contractAddress,
+                contract: contractname
+            };
+            
+            utils.saveConfiguration('./config.json', config);
+            
+            console.log('done');
+        }
+        else
+            console.log('failed');
     }
     catch (ex) {
         console.log(ex);

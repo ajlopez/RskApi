@@ -28,12 +28,16 @@ else
 
 const client = rskapi.client(config.host);
 
+const options = utils.getConfigurationOptions(config);
+
 (async function() {
     try {
-        let result = await client.call(from, to, fn, args);
+        let result = await client.call(from, to, fn, args, options);
         
         if (otypes.length)
             result = simpleabi.decodeValues(result, otypes);
+        else if (result && result.length === 32 * 2 + 2)
+            result = utils.getValue(result);
         
         console.log('result', result);
     }
