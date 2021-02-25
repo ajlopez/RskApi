@@ -37,6 +37,35 @@ exports['get transaction receipt by hash'] = async function (test) {
     test.done();
 };
 
+exports['estimate transaction gas'] = async function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_estimateGas = function (data) {
+        test.deepEqual(data, txdata);
+        
+        return 1000;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	var txdata = {
+		from: '0x01',
+		to: '0x02',
+		gasPrice: 1,
+		gas: 21000,
+		value: 10000,
+        data: '01020304'
+	}
+	
+	const data = await host.estimateGas(txdata);
+    
+    test.ok(data);
+    test.equal(data, 1000);
+    test.done();
+};
+
 exports['send transaction'] = async function (test) {
 	var provider = createProvider();
 	

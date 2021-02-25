@@ -70,6 +70,37 @@ exports['send transaction'] = function (test) {
 	});
 };
 
+exports['estimate transaction gas'] = function (test) {
+	var provider = createProvider();
+	
+	test.async();
+	
+	provider.eth_estimateGas = function (data) {
+        console.dir(data);
+        test.deepEqual(data, txdata);
+        
+        return 1000;
+	};
+	
+	var host = rskapi.host(provider);
+	
+	var txdata = {
+		from: '0x01',
+		to: '0x02',
+		gasPrice: 1,
+		gas: 21000,
+		value: 10000,
+        data: '01020304'
+	}
+	
+	host.estimateGas(txdata, function (err, data) {
+		test.equal(err, null);
+		test.ok(data);
+		test.equal(data, 1000);
+		test.done();
+	});
+};
+
 exports['call transaction'] = function (test) {
 	var provider = createProvider();
 	
