@@ -554,6 +554,39 @@ exports['deploy contract with bytes argument'] = async function (test) {
     test.done();
 };
 
+exports['estimate transaction gas'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+    provider.eth_gasPrice = function () {
+        return '0x2a';
+    };
+    
+	provider.eth_estimateGas = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.equal(tx.to, '0x0000000000000000000000000000000000000002');
+        test.equal(tx.gasPrice, 42);
+        test.equal(tx.gas, 5000000);
+        test.equal(tx.value, 0);
+        test.ok(tx.nonce == null);
+        test.equal(tx.data, '0x' + simpleabi.encodeCall('symbol()', null));
+        
+		return 1000;
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.estimate(1, 2, 'symbol()');
+    
+    test.ok(result);
+    test.equal(result, 1000);
+    
+    test.done();
+};
+
 exports['invoke contract'] = async function (test) {
     test.async();
     
