@@ -15,11 +15,13 @@ const maxdecdigits = Number.MAX_SAFE_INTEGER.toString(10).length;
 const maxhexadigits = Number.MAX_SAFE_INTEGER.toString(16).length;
 
 function getHexadecimalValue(value) {
+    const originalValue = value;
+    
     while (value[0] === '0' && value.length > 1)
         value = value.substring(1);
     
     if (value.length >= maxhexadigits)
-        return new BN(value, 16).toString();
+        return '0x' + originalValue;
     
     return parseInt(value, 16);
 }
@@ -28,6 +30,12 @@ function getValue(value) {
     if (typeof value !== 'string')
         return value;
     
+    if (value.startsWith('0x') && value.length > 2 + 20 * 2)
+        return value;
+   
+    if (value.length > 32 * 2)
+        return value;
+   
     if (value.startsWith('0x'))
         return getHexadecimalValue(value.substring(2));
     
@@ -150,6 +158,9 @@ function getConfigurationOptions(config) {
     if (config.options.gasPrice)
         options.gasPrice = config.options.gasPrice;
     
+    if (config.options.value)
+        options.value = config.options.value;
+
     return options;
 }
 

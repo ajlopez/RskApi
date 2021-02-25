@@ -26,7 +26,7 @@ const options = utils.getConfigurationOptions(config);
         if (result && result.message)
             throw result.message;
         
-        console.log('estimated gas', parseInt(result));
+        console.log('estimated gas', utils.getValue(result));
     }
     catch (ex) {
         console.log(ex);
