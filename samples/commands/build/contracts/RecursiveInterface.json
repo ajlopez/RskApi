@@ -28,14 +28,14 @@
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveInterface.sol",
     "exportedSymbols": {
       "RecursiveInterface": [
-        345
+        363
       ]
     },
-    "id": 346,
+    "id": 364,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 339,
+        "id": 357,
         "literals": [
           "solidity",
           ">=",
@@ -46,7 +46,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:9"
+        "src": "0:31:10"
       },
       {
         "baseContracts": [],
@@ -54,9 +54,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 345,
+        "id": 363,
         "linearizedBaseContracts": [
-          345
+          363
         ],
         "name": "RecursiveInterface",
         "nodeType": "ContractDefinition",
@@ -64,23 +64,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 344,
+            "id": 362,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "increment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 342,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 341,
+                  "id": 359,
                   "name": "level",
                   "nodeType": "VariableDeclaration",
-                  "scope": 344,
-                  "src": "90:10:9",
+                  "scope": 362,
+                  "src": "90:10:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -88,10 +88,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 340,
+                    "id": 358,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "90:4:9",
+                    "src": "90:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -101,39 +101,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "89:12:9"
+              "src": "89:12:10"
             },
             "returnParameters": {
-              "id": 343,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "110:0:9"
+              "src": "110:0:10"
             },
-            "scope": 345,
-            "src": "71:40:9",
+            "scope": 363,
+            "src": "71:40:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 346,
-        "src": "35:79:9"
+        "scope": 364,
+        "src": "35:79:10"
       }
     ],
-    "src": "0:118:9"
+    "src": "0:118:10"
   },
   "legacyAST": {
     "absolutePath": "/C/git/RskApi/samples/commands/contracts/RecursiveInterface.sol",
     "exportedSymbols": {
       "RecursiveInterface": [
-        345
+        363
       ]
     },
-    "id": 346,
+    "id": 364,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 339,
+        "id": 357,
         "literals": [
           "solidity",
           ">=",
@@ -144,7 +144,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:9"
+        "src": "0:31:10"
       },
       {
         "baseContracts": [],
@@ -152,9 +152,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 345,
+        "id": 363,
         "linearizedBaseContracts": [
-          345
+          363
         ],
         "name": "RecursiveInterface",
         "nodeType": "ContractDefinition",
@@ -162,23 +162,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 344,
+            "id": 362,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "increment",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 342,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 341,
+                  "id": 359,
                   "name": "level",
                   "nodeType": "VariableDeclaration",
-                  "scope": 344,
-                  "src": "90:10:9",
+                  "scope": 362,
+                  "src": "90:10:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -186,10 +186,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 340,
+                    "id": 358,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "90:4:9",
+                    "src": "90:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -199,26 +199,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "89:12:9"
+              "src": "89:12:10"
             },
             "returnParameters": {
-              "id": 343,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "110:0:9"
+              "src": "110:0:10"
             },
-            "scope": 345,
-            "src": "71:40:9",
+            "scope": 363,
+            "src": "71:40:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 346,
-        "src": "35:79:9"
+        "scope": 364,
+        "src": "35:79:10"
       }
     ],
-    "src": "0:118:9"
+    "src": "0:118:10"
   },
   "compiler": {
     "name": "solc",
@@ -226,7 +226,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-02-23T18:21:14.326Z",
+  "updatedAt": "2021-02-25T17:44:48.996Z",
   "devdoc": {
     "methods": {}
   },
