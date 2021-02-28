@@ -197,6 +197,7 @@ Some simple commands using a configuration file at https://github.com/ajlopez/Rs
 - 0.0.16 personal account functions, import raw key
 - 0.0.17 deploy method with constructor types in options, client number
 of blocks
+- 0.0.18 create account from private key, client and host estimate gas
 
 ## Posts
 
