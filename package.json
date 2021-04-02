@@ -7,7 +7,7 @@
         "api",
         "web3"
     ],
-    "version": "0.0.19",
+    "version": "0.0.20",
     "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
     "repository": {
         "type": "git",
@@ -23,7 +23,7 @@
     "dependencies": {
         "ethereumjs-tx": "^1.3.7",
         "ethereumjs-util": "6.1.0",
-        "simpleabi": "0.0.8",
+        "simpleabi": "0.0.9",
         "simplejsonrpc": "0.0.7"
     },
     "devDependencies": {

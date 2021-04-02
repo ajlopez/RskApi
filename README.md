@@ -199,6 +199,7 @@ Some simple commands using a configuration file at https://github.com/ajlopez/Rs
 of blocks
 - 0.0.18 create account from private key, client and host estimate gas
 - 0.0.19 estimate transfer, using simpleabi@0.0.8
+- 0.0.20 using simpleabi@0.0.9
 
 ## Posts
 
