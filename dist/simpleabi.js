@@ -2,6 +2,15 @@
 const simpleabi = (function() {
 const keccak256 = keccak_256;
 
+let Buffer;
+
+if (typeof global !== 'undefined' && global.Buffer)
+    Buffer = global.Buffer;
+else if (typeof window !== 'undefined' && window.Buffer)
+    Buffer = window.Buffer;
+else if (typeof ethereumjs !== 'undefined' && ethereumjs.Buffer && ethereumjs.Buffer.Buffer)
+    Buffer = ethereumjs.Buffer.Buffer;
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 if (Number.MAX_SAFE_INTEGER === undefined)
     Number.MAX_SAFE_INTEGER = 9007199254740991;
@@ -122,7 +131,7 @@ function encodeValue(value, type) {
         return encodeStringValue(value);
     }
     
-    if (value instanceof ArrayBuffer)
+    if (value instanceof Buffer)
         return encodeBytesValue(value);
     
 	if (Array.isArray(value))

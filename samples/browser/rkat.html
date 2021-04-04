@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello RSK API!</title>
+    <title>Hello RKat!</title>
     <link rel="stylesheet" href="./css/bulma.css">
     <script src="./js/ethereumjs-tx-1.3.3.min.js"></script>
     <script src="./js/simplejsonrpc.js"></script>
@@ -15,7 +15,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        RSK API in the browser
+        RKat in RSK Testnet
       </h1>
       <p class="subtitle">
         Using <strong>Bulma</strong>!
@@ -23,28 +23,22 @@
       
 
 <div class="field">
-  <label class="label">URL</label>
+  <label class="label">RKat ID</label>
   <div class="control">
-    <input id="url" class="input" type="text" placeholder="Text input" value="https://public-node.testnet.rsk.co:443">
+    <input id="rkatid" class="input" type="text" placeholder="Text input" value="42">
   </div>
 </div>
 
-<div class="field">
-  <label class="label">Address</label>
-  <div class="control">
-    <input id="address" class="input" type="text" value="0xd98c90c6df28e8e043895fa604e6c3a47a4f7b59">
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Balance</label>
-    <div id="balance"></div>
-</div>
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link" onclick="doPost()">Get Balance</button>
+    <button class="button is-link" onclick="doPost()">Retrieve RKat</button>
   </div>
+</div>
+
+<div class="field">
+  <label class="label">RKat</label>
+    <div id="rkat"></div>
 </div>
 
       
@@ -52,17 +46,20 @@
   </section>
 <script>
 function doPost() {
-    const url = document.getElementById('url').value;
-    const address = document.getElementById('address').value;
-    const balance = document.getElementById('balance');
+    const url = 'https://public-node.testnet.rsk.co:443';
+    const contract = "0x2d803ee8b4447fec6fa41c25407e6c6e944f510a";
+    const sender = "0x4115d23b044e2d5a713329b8cf35520cf7ae8421";
+    const rkatid = document.getElementById('rkatid').value;
+        
+    const rkat = document.getElementById('rkat');
     
     const client = rskapi.client(url);
     
-    client.balance(address, function (err, data) {
+    client.call(sender, contract, "rkats(uint256)", [ rkatid ], null, function (err, data) {
         if (err)
             alert(err);
         else
-            balance.innerText = new ethereumjs.BN(data.result.substring(2), 16).toString();
+            rkat.innerText = data.result.substring(0, 10);
     });
 }
 </script>  
