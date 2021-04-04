@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello RSK API!</title>
+    <link rel="stylesheet" href="./css/bulma.css">
+    <script src="./js/ethereumjs-tx-1.3.3.min.js"></script>
+    <script src="./js/simplejsonrpc.js"></script>
+    <script src="./js/sha3.js"></script>
+    <script src="./js/simpleabi.js"></script>
+    <script src="./js/rskapi.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        RSK API in the browser
+      </h1>
+      <p class="subtitle">
+        Using <strong>Bulma</strong>!
+      </p>
+      
+
+<div class="field">
+  <label class="label">URL</label>
+  <div class="control">
+    <input id="url" class="input" type="text" placeholder="Text input" value="https://public-node.testnet.rsk.co:443">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Block</label>
+  <div class="control">
+    <input id="block" class="input" type="text" value="42">
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" onclick="doPost()">Get Block</button>
+  </div>
+</div>
+      
+    </div>
+  </section>
+<script>
+function doPost() {
+    const url = document.getElementById('url').value;
+    const block = document.getElementById('block').value;
+    
+    const client = rskapi.client(url);
+    
+    client.block(block, function (err, data) {
+        if (err)
+            alert(err);
+        else
+            alert(JSON.stringify(data, null, 4));
+    });
+}
+</script>  
+  </body>
+</html>
+
