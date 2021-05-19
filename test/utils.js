@@ -20,6 +20,14 @@ exports['encode value'] = function (test) {
     test.equal(utils.toHexValue('0x2a'), toValue('2a'));
 }
 
+exports['to hex number'] = function (test) {
+    test.equal(utils.toHexNumber(0), '0x0');
+    test.equal(utils.toHexNumber(1), '0x1');
+    test.equal(utils.toHexNumber(42), '0x2a');
+    test.equal(utils.toHexNumber('0x2a'), '0x2a');
+    test.equal(utils.toHexNumber('1000000000000000000'), '0xde0b6b3a7640000');
+}
+
 exports['encode address'] = function (test) {
     test.equal(utils.toHexAddress(0), toAddress('0'));
     test.equal(utils.toHexAddress(1), toAddress('1'));

@@ -207,6 +207,7 @@ of blocks
 
 ## To Do
 
+- Update browser version
 - deploy command with constructor types
 - block height parameter in some methods
 

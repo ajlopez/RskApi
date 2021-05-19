@@ -85,7 +85,7 @@ function doPost() {
         if (err)
             alert(err);
         else {
-            const id = data.result.substring(0, 12);
+            const id = data.substring(0, 12);
             
             rkat.innerText = id;
             

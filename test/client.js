@@ -319,6 +319,37 @@ exports['transfer value'] = async function (test) {
     test.done();
 };
 
+exports['transfer big value'] = async function (test) {
+    test.async();
+    
+    const provider = createProvider();
+    
+    provider.eth_gasPrice = function () {
+        return '0x2a';
+    };
+    
+	provider.eth_sendTransaction = function (tx) {
+        test.ok(tx);
+        
+        test.equal(tx.from, '0x0000000000000000000000000000000000000001');
+        test.equal(tx.to, '0x0000000000000000000000000000000000000002');
+        test.equal(tx.gasPrice, 42);
+        test.equal(tx.gas, 21000);
+        test.equal(tx.value, rskapi.utils.toHexNumber('1000000000000000000'));
+        
+		return '0x2a';
+	};
+    
+    const client = rskapi.client(provider);
+    
+    const result = await client.transfer(1, 2, '1000000000000000000');
+    
+    test.ok(result);
+    test.equal(result, '0x2a');
+    
+    test.done();
+};
+
 exports['transfer value using options'] = async function (test) {
     test.async();
     
